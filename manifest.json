@@ -1,0 +1,23 @@
+{
+  "short_name": "OM AI Digital Studio",
+  "name": "OM AI Digital Studio - Обучение нейросетям и ChatGPT",
+  "description": "Интенсивы и курсы по искусственному интеллекту, ChatGPT, MidJourney и автоматизации бизнеса",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#39ff14",
+  "background_color": "#0a0a0a",
+  "categories": ["education", "business", "productivity"],
+  "lang": "ru"
+}

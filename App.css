@@ -1,0 +1,148 @@
+/* Кастомные стили для кнопок и компонентов */
+
+.btn-cyber {
+  @apply relative font-bold rounded-lg border-2 transition-all duration-300 text-center inline-block no-underline;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-cyber:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.btn-primary {
+  @apply bg-cyber-green text-cyber-dark border-cyber-green;
+}
+
+.btn-primary:hover {
+  @apply bg-transparent text-cyber-green shadow-lg;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+}
+
+.btn-secondary {
+  @apply bg-transparent text-cyber-purple border-cyber-purple;
+}
+
+.btn-secondary:hover {
+  @apply bg-cyber-purple text-white shadow-lg;
+  box-shadow: 0 0 20px rgba(176, 38, 255, 0.5);
+}
+
+.btn-accent {
+  @apply bg-transparent text-cyber-cyan border-cyber-cyan;
+}
+
+.btn-accent:hover {
+  @apply bg-cyber-cyan text-cyber-dark shadow-lg;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Анимация появления текста */
+.typing-animation {
+  overflow: hidden;
+  border-right: 3px solid #39ff14;
+  white-space: nowrap;
+  animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+/* Стилизация карточек */
+.project-card {
+  @apply bg-cyber-gray border border-cyber-green/20 rounded-lg p-6 hover:border-cyber-green transition-all duration-300;
+  backdrop-filter: blur(10px);
+}
+
+.project-card:hover {
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Стилизация для форм */
+.form-cyber {
+  @apply bg-cyber-gray border border-cyber-green/30 rounded-lg p-4 text-white placeholder-gray-400 focus:border-cyber-green focus:outline-none transition-all duration-300;
+}
+
+.form-cyber:focus {
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+}
+
+/* Анимация загрузки */
+.loader {
+  border: 4px solid rgba(57, 255, 20, 0.3);
+  border-top: 4px solid #39ff14;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Стилизация скроллбара */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #39ff14;
+  border-radius: 4px;
+}
+
+/* Эффект матрицы */
+.matrix-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 98%, #39ff14 100%);
+  background-size: 3px 3px;
+  opacity: 0.1;
+  animation: matrix-scroll 10s linear infinite;
+}
+
+@keyframes matrix-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(3px); }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .btn-cyber {
+    @apply text-sm px-4 py-2;
+  }
+  
+  .neon-text {
+    text-shadow: 
+      0 0 3px currentColor,
+      0 0 6px currentColor,
+      0 0 9px currentColor;
+  }
+}
+
+/* Доступность */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Высококонтрастный режим */
+@media (prefers-contrast: high) {
+  .neon-text {
+    text-shadow: none;
+    border: 2px solid currentColor;
+    padding: 2px 4px;
+  }
+}

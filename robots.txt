@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Основные страницы
+Allow: /
+Allow: /blog/
+Allow: /faq/
+
+# Блокировать служебные страницы
+Disallow: /api/
+Disallow: /admin/
+Disallow: /static/js/
+Disallow: /static/css/
+
+# Sitemap
+Sitemap: https://aibuddah.com/sitemap.xml
+
+# Скорость обхода
+Crawl-delay: 1

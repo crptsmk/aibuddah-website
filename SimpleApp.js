@@ -1,0 +1,992 @@
+import React from 'react';
+import './App.css';
+
+function SimpleApp() {
+  return (
+    <div className="bg-cyber-dark text-white min-h-screen">
+      {/* Navigation - С фирменным логотипом */}
+      <nav className="fixed top-0 left-0 right-0 bg-cyber-dark/95 backdrop-blur-md border-b border-cyber-green/30 z-50 py-3 sm:py-4">
+        <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_ai-buddah/artifacts/rrw7cpwp_3fd5508f-c694-4ec1-826e-3fb637a9b523.png" 
+              alt="AI Buddah Logo" 
+              className="w-8 h-8 sm:w-10 sm:h-10"
+            />
+            <span className="text-xl sm:text-2xl font-brutal font-black text-cyber-green">AI BUDDAH</span>
+          </div>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+            <a href="#about" className="text-gray-300 hover:text-cyber-green transition-colors text-sm xl:text-base">О себе</a>
+            <a href="#intensive" className="text-gray-300 hover:text-cyber-orange transition-colors text-sm xl:text-base">Интенсив</a>
+            <a href="#buddah-base" className="text-gray-300 hover:text-cyber-purple transition-colors text-sm xl:text-base">Base</a>
+            <a href="#lead-magnet" className="text-gray-300 hover:text-cyber-cyan transition-colors text-sm xl:text-base">Бесплатно</a>
+            <a href="#cases" className="text-gray-300 hover:text-cyber-cyan transition-colors text-sm xl:text-base">Кейсы</a>
+            <a href="#faq" className="text-gray-300 hover:text-cyber-green transition-colors text-sm xl:text-base">FAQ</a>
+            <a href="https://payform.ru/ms93cWm/" className="btn-cyber btn-primary text-xs sm:text-sm px-3 sm:px-4 py-2">
+              🔥 Интенсив
+            </a>
+          </div>
+          
+          {/* Mobile Navigation */}
+          <div className="lg:hidden flex items-center gap-2">
+            <a href="#lead-magnet" className="btn-cyber btn-accent text-xs px-3 py-2">
+              🎁 FREE
+            </a>
+            <a href="#buddah-base" className="btn-cyber btn-secondary text-xs px-3 py-2">
+              Base
+            </a>
+            <a href="https://payform.ru/ms93cWm/" className="btn-cyber btn-primary text-xs px-3 py-2">
+              🔥 Курс
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section - Улучшенная мобильная адаптация */}
+      <section className="min-h-screen relative flex items-center justify-center pt-16 sm:pt-20">
+        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-brutal font-black text-cyber-green neon-text mb-6 sm:mb-8 leading-tight">
+            Обучение нейросетям и ChatGPT с нуля за 2 недели
+          </h1>
+          
+          <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-brutal font-black text-cyber-green neon-text mb-4 sm:mb-6">
+            AI BUDDAH
+          </div>
+          
+          <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-cyber-green via-cyber-purple to-cyber-cyan mx-auto mb-6 sm:mb-8"></div>
+
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold mb-4 sm:mb-6 max-w-5xl mx-auto leading-tight px-2">
+            <span className="text-white">Интенсив по AI от эксперта </span>
+            <span className="text-cyber-green">Александра</span>
+            <span className="text-white"> — продюсера </span>
+            <span className="text-cyber-purple">digital-продуктов</span>
+            <span className="text-white"> и автоматизатора бизнеса</span>
+          </h2>
+
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-2">
+            Изучи <strong className="text-cyber-green">MidJourney, ChatGPT, Veo 3</strong> и создавай системы автоматизации: 
+            от ботов и автоворонок до AI-контента и маркетплейсов
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-12 max-w-4xl mx-auto px-2">
+            <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-lg p-3 sm:p-4">
+              <div className="text-cyber-green text-xl sm:text-2xl mb-2">⚡</div>
+              <div className="text-sm font-bold text-cyber-green">За 2 недели</div>
+              <div className="text-xs text-gray-400">Интенсивный формат</div>
+            </div>
+            <div className="bg-cyber-gray/30 border border-cyber-purple/20 rounded-lg p-3 sm:p-4">
+              <div className="text-cyber-purple text-xl sm:text-2xl mb-2">🎯</div>
+              <div className="text-sm font-bold text-cyber-purple">Практика</div>
+              <div className="text-xs text-gray-400">Готовое портфолио</div>
+            </div>
+            <div className="bg-cyber-gray/30 border border-cyber-cyan/20 rounded-lg p-3 sm:p-4">
+              <div className="text-cyber-cyan text-xl sm:text-2xl mb-2">💰</div>
+              <div className="text-sm font-bold text-cyber-cyan">Монетизация</div>
+              <div className="text-xs text-gray-400">Реальные навыки</div>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
+            <a 
+              href="https://payform.ru/4193Ie4/" 
+              className="btn-cyber btn-primary text-base sm:text-lg lg:text-xl px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto hover:scale-105 transition-transform"
+            >
+              🔥 ВСТУПИТЬ В AI BASE ЗА 999₽
+            </a>
+            <a 
+              href="https://t.me/buddah_ai" 
+              className="btn-cyber btn-secondary text-sm sm:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-auto"
+            >
+              📱 Бесплатный Telegram-канал
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 bg-cyber-gray relative">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-brutal font-black text-cyber-cyan neon-text mb-8">
+                ПОЧЕМУ ИИ — ПРОФЕССИЯ БУДУЩЕГО
+              </h2>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+              <div className="text-left">
+                <h3 className="text-2xl font-bold text-cyber-green mb-6">Об Александре (AI Buddah)</h3>
+                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                  <strong className="text-cyber-green">AI-предприниматель и digital-продюсер</strong>, создаю продукты, 
+                  автоматизации и обучение в сфере искусственного интеллекта уже более 3 лет.
+                </p>
+                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                  Помогаю бизнесу внедрять <strong className="text-cyber-purple">нейросети и автоматизировать процессы</strong> 
+                  для увеличения прибыли и экономии времени. Более 1000 учеников уже применяют мои методики.
+                </p>
+              </div>
+              
+              <div className="bg-cyber-dark/50 border border-cyber-green/20 rounded-2xl p-8">
+                <h3 className="text-3xl font-bold text-cyber-green mb-6 text-center">
+                  🚀 Рынок ИИ растет на 40% в год
+                </h3>
+                <div className="grid md:grid-cols-3 gap-8 text-center">
+                  <div>
+                    <div className="text-4xl font-black text-cyber-cyan mb-2">$500B</div>
+                    <div className="text-gray-300">Размер рынка ИИ к 2025</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-black text-cyber-purple mb-2">85%</div>
+                    <div className="text-gray-300">Компаний внедряют ИИ</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-black text-cyber-orange mb-2">$150k</div>
+                    <div className="text-gray-300">Средняя зарплата AI-специалиста</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Intensive Section */}
+      <section id="intensive" className="py-20 bg-gradient-to-br from-cyber-dark via-cyber-gray to-cyber-dark relative">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-brutal font-black text-cyber-orange neon-text mb-6">
+              🔥 ИНТЕНСИВ ПО НЕЙРОСЕТЯМ
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Интенсив по нейросетям от OM AI Digital Studio
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-6 mb-8">
+              <div className="bg-cyber-gray/50 border border-cyber-orange/30 rounded-lg px-4 py-2">
+                <span className="text-cyber-orange font-bold">📅 Старт: 29 сентября</span>
+              </div>
+              <div className="bg-cyber-gray/50 border border-cyber-pink/30 rounded-lg px-4 py-2">
+                <span className="text-cyber-pink font-bold">💎 Цена: 19,990₽</span>
+              </div>
+              <div className="bg-cyber-gray/50 border border-cyber-cyan/30 rounded-lg px-4 py-2">
+                <span className="text-cyber-cyan font-bold">👥 Мест: только 15</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center bg-gradient-to-r from-cyber-orange/10 via-cyber-pink/10 to-cyber-orange/10 border border-cyber-orange/30 rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-cyber-orange mb-4">
+              🚀 Бронируй место прямо сейчас!
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Только 15 мест • Старт уже 29 сентября • Бонус: Google AI Pro на 12 месяцев
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="https://payform.ru/ms93cWm/" 
+                className="btn-cyber btn-primary text-lg px-8 py-4"
+              >
+                🔥 ПРОЙТИ ИНТЕНСИВ за 19,990₽
+              </a>
+              <a 
+                href="https://t.me/buddah_ai" 
+                className="btn-cyber btn-secondary text-lg px-8 py-4"
+              >
+                💬 Задать вопросы
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Buddah Base Section - Полностью переработанная */}
+      <section id="buddah-base" className="py-20 bg-gradient-cyber relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-96 h-96 bg-cyber-purple rounded-full opacity-10 blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyber-cyan rounded-full opacity-10 blur-3xl animate-float"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            {/* Заголовок с УТП */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-brutal font-black text-cyber-green neon-text mb-6">
+                AI BUDDAH BASE
+              </h2>
+              <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-5xl mx-auto mb-8 leading-relaxed">
+                Закрытая цифровая экосистема для быстрого освоения нейросетей, прокачки автоматизации и превращения знаний в <span className="text-cyber-green font-bold">реальные деньги</span>
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                <span className="bg-cyber-green/10 border border-cyber-green text-cyber-green px-4 py-2 rounded-full text-sm">
+                  🚀 Без воды и теории
+                </span>
+                <span className="bg-cyber-purple/10 border border-cyber-purple text-cyber-purple px-4 py-2 rounded-full text-sm">
+                  ⚡ Только практика
+                </span>
+                <span className="bg-cyber-cyan/10 border border-cyber-cyan text-cyber-cyan px-4 py-2 rounded-full text-sm">
+                  💰 Фокус на монетизацию
+                </span>
+              </div>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-8 mb-16">
+              {/* Левая колонка - Что внутри */}
+              <div className="lg:col-span-2">
+                <h3 className="text-2xl sm:text-3xl font-bold text-cyber-purple mb-8 neon-text">
+                  🧠 Что внутри AI Base:
+                </h3>
+                
+                <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                  <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-lg p-4 sm:p-6 hover:border-cyber-green transition-all duration-300">
+                    <div className="text-cyber-green text-2xl mb-3">🎥</div>
+                    <h4 className="text-lg font-bold text-cyber-green mb-3">30+ практических видеоуроков</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      ChatGPT, Midjourney, n8n, Threads — с пошаговыми разборами и лайфхаками по монетизации
+                    </p>
+                  </div>
+                  
+                  <div className="bg-cyber-gray/30 border border-cyber-purple/20 rounded-lg p-4 sm:p-6 hover:border-cyber-purple transition-all duration-300">
+                    <div className="text-cyber-purple text-2xl mb-3">💬</div>
+                    <h4 className="text-lg font-bold text-cyber-purple mb-3">2000+ проверенных промптов</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      По категориям: контент, маркетинг, автоматизация, продажи — для всех нейросетей
+                    </p>
+                  </div>
+                  
+                  <div className="bg-cyber-gray/30 border border-cyber-cyan/20 rounded-lg p-4 sm:p-6 hover:border-cyber-cyan transition-all duration-300">
+                    <div className="text-cyber-cyan text-2xl mb-3">⚙️</div>
+                    <h4 className="text-lg font-bold text-cyber-cyan mb-3">50+ шаблонов автоматизаций</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Готовые сценарии n8n, Make, Zapier — создавай автоворонки за минуты
+                    </p>
+                  </div>
+                  
+                  <div className="bg-cyber-gray/30 border border-cyber-orange/20 rounded-lg p-4 sm:p-6 hover:border-cyber-orange transition-all duration-300">
+                    <div className="text-cyber-orange text-2xl mb-3">🛠️</div>
+                    <h4 className="text-lg font-bold text-cyber-orange mb-3">1000+ AI-инструментов</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Кастомные GPT, подборки сервисов для любой задачи — всегда актуальные
+                    </p>
+                  </div>
+                </div>
+
+                {/* Дополнительные преимущества */}
+                <div className="bg-cyber-dark/70 border border-cyber-green/30 rounded-2xl p-6 mb-8">
+                  <h4 className="text-xl font-bold text-cyber-green mb-4">💎 Эксклюзивные бонусы:</h4>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="flex items-center gap-3">
+                      <span className="text-cyber-green">✓</span>
+                      <span className="text-gray-300">Закрытая Telegram-группа</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-cyber-green">✓</span>
+                      <span className="text-gray-300">Еженедельные Q&A эфиры</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-cyber-green">✓</span>
+                      <span className="text-gray-300">Персональная поддержка</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-cyber-green">✓</span>
+                      <span className="text-gray-300">Обновления весь год</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Кому подойдет */}
+                <div className="mb-8">
+                  <h4 className="text-xl font-bold text-cyber-cyan mb-6">💼 Кому подойдет AI Base:</h4>
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    <div className="flex items-center gap-3 p-3 bg-cyber-gray/20 rounded-lg">
+                      <span className="text-cyber-cyan">🎯</span>
+                      <span className="text-gray-300 text-sm">Врагам скучной рутины</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-3 bg-cyber-gray/20 rounded-lg">
+                      <span className="text-cyber-purple">🚀</span>
+                      <span className="text-gray-300 text-sm">Создателям нового</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-3 bg-cyber-gray/20 rounded-lg">
+                      <span className="text-cyber-green">📈</span>
+                      <span className="text-gray-300 text-sm">Новичкам и профи</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-3 bg-cyber-gray/20 rounded-lg">
+                      <span className="text-cyber-orange">🤝</span>
+                      <span className="text-gray-300 text-sm">Ценителям комьюнити</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Правая колонка - Прайсинг */}
+              <div className="flex justify-center lg:justify-start">
+                <div className="bg-cyber-gray border-2 border-cyber-green rounded-2xl p-6 sm:p-8 text-center relative overflow-hidden max-w-sm w-full sticky top-24">
+                  {/* Фоновый эффект */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyber-green/5 via-cyber-purple/5 to-cyber-cyan/5"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="mb-6">
+                      <span className="text-cyber-cyan text-xs border border-cyber-cyan/50 rounded-full px-3 py-1">
+                        💎 ЭКСКЛЮЗИВНЫЙ ДОСТУП
+                      </span>
+                    </div>
+                    
+                    {/* Цена */}
+                    <div className="mb-8">
+                      <div className="text-5xl sm:text-6xl font-brutal font-black text-cyber-green neon-text mb-2">
+                        999<span className="text-xl">₽</span>
+                      </div>
+                      <div className="text-cyber-purple text-lg font-bold mb-2">
+                        на весь год
+                      </div>
+                      <div className="text-gray-400 text-sm mb-4">
+                        меньше 3 ₽ в день
+                      </div>
+                      <div className="bg-cyber-green/10 border border-cyber-green/30 rounded-lg p-3 mb-4">
+                        <div className="text-cyber-green font-bold text-sm">💰 Окупаемость за 1 проект</div>
+                        <div className="text-gray-400 text-xs">Средний заказ на AI-контент: 15,000₽</div>
+                      </div>
+                    </div>
+
+                    {/* Гарантии */}
+                    <div className="mb-6">
+                      <div className="bg-cyber-purple/10 border border-cyber-purple/30 rounded-lg p-3 mb-3">
+                        <div className="text-cyber-purple font-bold text-sm">🔒 Гарантия результата</div>
+                        <div className="text-gray-400 text-xs">Возврат средств в первые 7 дней</div>
+                      </div>
+                      <div className="bg-cyber-cyan/10 border border-cyber-cyan/30 rounded-lg p-3">
+                        <div className="text-cyber-cyan font-bold text-sm">⚡ Мгновенный доступ</div>
+                        <div className="text-gray-400 text-xs">Доступ открывается сразу после оплаты</div>
+                      </div>
+                    </div>
+
+                    <a 
+                      href="https://payform.ru/4193Ie4/" 
+                      className="btn-cyber btn-primary w-full text-lg py-4 mb-4 block hover:scale-105 transition-transform"
+                    >
+                      🚀 ВСТУПИТЬ В AI BASE
+                    </a>
+                    
+                    <p className="text-xs text-cyber-green mb-2">
+                      Добро пожаловать в комьюнити AI-монахов 🚀
+                    </p>
+
+                    <div className="flex items-center justify-center gap-2 text-xs text-gray-400 mt-4">
+                      <span>🔐</span>
+                      <span>Безопасная оплата</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Социальные доказательства */}
+            <div className="text-center bg-cyber-dark/50 border border-cyber-green/20 rounded-2xl p-6 sm:p-8">
+              <h3 className="text-2xl font-bold text-cyber-green mb-6">
+                🌟 Миссия AI BUDDAH BASE
+              </h3>
+              <p className="text-gray-300 leading-relaxed max-w-4xl mx-auto mb-6">
+                Собрать лучшие рабочие инструменты и методики по ИИ, автоматизации, маркетингу и контенту в одном месте. 
+                Показать тебе, как знания превращаются в результат без жёсткого "буста" и выгорания. 
+                <span className="text-cyber-cyan font-bold"> Ты быстро увидишь прогресс и реальные результаты!</span>
+              </p>
+              
+              <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyber-green mb-2">1000+</div>
+                  <div className="text-gray-400 text-sm">Активных участников</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyber-purple mb-2">500+</div>
+                  <div className="text-gray-400 text-sm">Успешных проектов</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyber-cyan mb-2">95%</div>
+                  <div className="text-gray-400 text-sm">Довольных пользователей</div>
+                </div>
+              </div>
+              
+              <a href="https://payform.ru/4193Ie4/" className="btn-cyber btn-primary text-lg px-8 py-4 inline-block">
+                💎 Начать зарабатывать сегодня
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lead Magnet Section - НОВЫЙ БЛОК */}
+      <section id="lead-magnet" className="py-20 bg-cyber-gray relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-brutal font-black text-cyber-cyan neon-text mb-6">
+                🎁 БЕСПЛАТНЫЙ СТАРТОВЫЙ НАБОР
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto">
+                Получи 3 эксклюзивных материала и начни зарабатывать с AI уже сегодня
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {/* Левая колонка - что получишь */}
+              <div>
+                <h3 className="text-2xl font-bold text-cyber-cyan mb-6">📦 Что в наборе:</h3>
+                
+                <div className="space-y-4 mb-8">
+                  <div className="bg-cyber-dark/50 border border-cyber-green/20 rounded-lg p-4 hover:border-cyber-green transition-all duration-300">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-cyber-green text-2xl">📋</span>
+                      <h4 className="font-bold text-cyber-green">Чек-лист "Первые шаги в AI"</h4>
+                    </div>
+                    <p className="text-gray-300 text-sm pl-10">
+                      Пошаговый план освоения нейросетей за 30 дней. 10 конкретных действий для старта заработка.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-cyber-dark/50 border border-cyber-purple/20 rounded-lg p-4 hover:border-cyber-purple transition-all duration-300">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-cyber-purple text-2xl">💬</span>
+                      <h4 className="font-bold text-cyber-purple">50 готовых промптов</h4>
+                    </div>
+                    <p className="text-gray-300 text-sm pl-10">
+                      Лучшие промпты для ChatGPT: контент, маркетинг, автоматизация. Копируй и используй!
+                    </p>
+                  </div>
+                  
+                  <div className="bg-cyber-dark/50 border border-cyber-orange/20 rounded-lg p-4 hover:border-cyber-orange transition-all duration-300">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-cyber-orange text-2xl">🛠️</span>
+                      <h4 className="font-bold text-cyber-orange">Гайд по AI-инструментам</h4>
+                    </div>
+                    <p className="text-gray-300 text-sm pl-10">
+                      Обзор 20+ лучших AI-сервисов с инструкциями по использованию и ссылками.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-cyber-green/10 border border-cyber-green/30 rounded-lg p-4 mb-6">
+                  <div className="text-center">
+                    <div className="text-cyber-green font-bold mb-2">🔥 Бонус для подписчиков:</div>
+                    <div className="text-gray-300 text-sm">Приглашение на бесплатный мини-курс "5 способов заработка на AI"</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Правая колонка - форма */}
+              <div className="flex justify-center">
+                <div className="bg-cyber-dark border-2 border-cyber-cyan rounded-2xl p-6 sm:p-8 w-full max-w-md">
+                  <div className="text-center mb-6">
+                    <div className="w-20 h-20 bg-cyber-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">🎁</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-cyber-cyan mb-2">Получить бесплатно</h3>
+                    <p className="text-gray-400 text-sm">Никакого спама, только ценная информация</p>
+                  </div>
+
+                  <div className="space-y-4 mb-6">
+                    <input 
+                      type="text" 
+                      placeholder="Ваше имя"
+                      className="w-full bg-cyber-gray border border-cyber-cyan/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyber-cyan focus:outline-none"
+                    />
+                    <input 
+                      type="email" 
+                      placeholder="Email для получения материалов"
+                      className="w-full bg-cyber-gray border border-cyber-cyan/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyber-cyan focus:outline-none"
+                    />
+                  </div>
+
+                  <button className="btn-cyber btn-primary w-full text-lg py-4 mb-4 hover:scale-105 transition-transform">
+                    📥 СКАЧАТЬ БЕСПЛАТНО
+                  </button>
+
+                  <div className="text-center text-xs text-gray-400">
+                    <p>🔒 Ваши данные защищены</p>
+                    <p>Материалы придут на email в течение 5 минут</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Статистика */}
+            <div className="bg-cyber-dark/50 border border-cyber-green/20 rounded-2xl p-6 sm:p-8">
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-cyber-green mb-4">📈 Результаты тех, кто скачал материалы:</h3>
+              </div>
+              <div className="grid sm:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyber-green mb-2">87%</div>
+                  <div className="text-gray-400 text-sm">Начали использовать AI в работе</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyber-purple mb-2">52%</div>
+                  <div className="text-gray-400 text-sm">Получили первый доход от AI</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyber-cyan mb-2">34%</div>
+                  <div className="text-gray-400 text-sm">Купили AI Base после ознакомления</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Success Cases Section - С реальными фото */}
+      <section id="cases" className="py-20 bg-cyber-dark relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-brutal font-black text-cyber-purple neon-text mb-6">
+                📈 РЕАЛЬНЫЕ КЕЙСЫ УЧАСТНИКОВ
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto">
+                Узнай, как участники AI Base уже зарабатывают с помощью нейросетей
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-xl p-6 hover:border-cyber-green transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_ai-buddah/artifacts/sle364vf_860a8941-7a10-4eea-a6ed-bb3f811e306b.png" 
+                    alt="Алексей К." 
+                    className="w-12 h-12 rounded-full object-cover border-2 border-cyber-green"
+                  />
+                  <div>
+                    <div className="font-bold text-cyber-green">Алексей К.</div>
+                    <div className="text-sm text-gray-400">SMM-агентство</div>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <div className="bg-cyber-green/10 border border-cyber-green/30 rounded-lg p-3 mb-3">
+                    <div className="text-cyber-green font-bold text-center">ДО vs ПОСЛЕ</div>
+                    <div className="text-xs text-gray-400 text-center">5 часов на пост → 30 минут</div>
+                  </div>
+                  <div className="text-2xl font-bold text-cyber-green mb-2">$3,200/мес</div>
+                  <div className="text-sm text-gray-300">
+                    Создание контента с MidJourney + ChatGPT для 8 брендов. 
+                    Время на проект сократилось в 10 раз!
+                  </div>
+                </div>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="text-xs bg-cyber-green/10 text-cyber-green px-2 py-1 rounded">MidJourney</span>
+                  <span className="text-xs bg-cyber-green/10 text-cyber-green px-2 py-1 rounded">ChatGPT</span>
+                </div>
+              </div>
+
+              <div className="bg-cyber-gray/30 border border-cyber-purple/20 rounded-xl p-6 hover:border-cyber-purple transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_ai-buddah/artifacts/0qq4vjid_ChatGPT%20Image%20Jul%206%2C%202025%2C%2004_05_00%20AM.png" 
+                    alt="Мария Д." 
+                    className="w-12 h-12 rounded-full object-cover border-2 border-cyber-purple"
+                  />
+                  <div>
+                    <div className="font-bold text-cyber-purple">Мария Д.</div>
+                    <div className="text-sm text-gray-400">Фриланс-маркетолог</div>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <div className="bg-cyber-purple/10 border border-cyber-purple/30 rounded-lg p-3 mb-3">
+                    <div className="text-cyber-purple font-bold text-center">РЕЗУЛЬТАТ</div>
+                    <div className="text-xs text-gray-400 text-center">25 часов в неделю экономии</div>
+                  </div>
+                  <div className="text-2xl font-bold text-cyber-purple mb-2">$2,800/мес</div>
+                  <div className="text-sm text-gray-300">
+                    Автоматизация email-воронок через n8n. 
+                    Увеличила доходы в 3 раза при меньших трудозатратах.
+                  </div>
+                </div>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="text-xs bg-cyber-purple/10 text-cyber-purple px-2 py-1 rounded">n8n</span>
+                  <span className="text-xs bg-cyber-purple/10 text-cyber-purple px-2 py-1 rounded">Автоматизация</span>
+                </div>
+              </div>
+
+              <div className="bg-cyber-gray/30 border border-cyber-cyan/20 rounded-xl p-6 hover:border-cyber-cyan transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_ai-buddah/artifacts/kap146yr_Generated%20Image%20September%2006%2C%202025%20-%203_13PM-fotor-20250906151727.png" 
+                    alt="Дмитрий С." 
+                    className="w-12 h-12 rounded-full object-cover border-2 border-cyber-cyan"
+                  />
+                  <div>
+                    <div className="font-bold text-cyber-cyan">Дмитрий С.</div>
+                    <div className="text-sm text-gray-400">Видеопродюсер</div>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <div className="bg-cyber-cyan/10 border border-cyber-cyan/30 rounded-lg p-3 mb-3">
+                    <div className="text-cyber-cyan font-bold text-center">ДОСТИЖЕНИЕ</div>
+                    <div className="text-xs text-gray-400 text-center">Собственная AI-студия</div>
+                  </div>
+                  <div className="text-2xl font-bold text-cyber-cyan mb-2">$4,500/мес</div>
+                  <div className="text-sm text-gray-300">
+                    Создание видео с Veo 3 + CapCut. 
+                    Запустил собственную студию AI-видеопродакшена за 2 месяца.
+                  </div>
+                </div>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="text-xs bg-cyber-cyan/10 text-cyber-cyan px-2 py-1 rounded">Veo 3</span>
+                  <span className="text-xs bg-cyber-cyan/10 text-cyber-cyan px-2 py-1 rounded">CapCut</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Доказательства */}
+            <div className="mt-12 grid md:grid-cols-2 gap-8">
+              <div className="bg-cyber-green/10 border border-cyber-green/30 rounded-xl p-6">
+                <h4 className="text-lg font-bold text-cyber-green mb-4 text-center">
+                  📸 Скриншот из чата участников
+                </h4>
+                <div className="bg-cyber-dark/50 rounded-lg p-4 mb-4">
+                  <div className="text-xs text-gray-400 mb-2">Telegram • AI Buddah Base</div>
+                  <div className="text-sm text-gray-300 italic">
+                    "Ребят, только что получил заказ на 45к за контент-план на месяц! 
+                    Все сделал по шаблонам из базы за 3 дня. Спасибо Александру за промпты! 🔥"
+                  </div>
+                  <div className="text-xs text-cyber-green mt-2">Алексей • Сегодня, 14:23</div>
+                </div>
+                <div className="text-center text-cyber-green font-bold">
+                  ✅ Подтверждено модераторами
+                </div>
+              </div>
+
+              <div className="bg-cyber-purple/10 border border-cyber-purple/30 rounded-xl p-6">
+                <h4 className="text-lg font-bold text-cyber-purple mb-4 text-center">
+                  💰 Результаты за 3 месяца
+                </h4>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Средний доход участника:</span>
+                    <span className="text-cyber-purple font-bold">+180%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Экономия времени:</span>
+                    <span className="text-cyber-green font-bold">15-30 ч/нед</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Довольных участников:</span>
+                    <span className="text-cyber-cyan font-bold">96%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Окупили базу за:</span>
+                    <span className="text-cyber-orange font-bold">2-4 недели</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <div className="bg-cyber-green/10 border border-cyber-green/30 rounded-xl p-6 sm:p-8 max-w-4xl mx-auto">
+                <h3 className="text-xl sm:text-2xl font-bold text-cyber-green mb-4">
+                  💡 Секрет успеха участников
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Они не тратили месяцы на изучение теории. Взяли готовые промпты и шаблоны из AI Base, 
+                  адаптировали под свои задачи и начали зарабатывать уже через 2-3 недели.
+                </p>
+                <a href="https://payform.ru/4193Ie4/" className="btn-cyber btn-primary text-lg px-8 py-4">
+                  🚀 Повторить их успех
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Testimonials Section */}
+      <section id="testimonials" className="py-20 bg-cyber-gray relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-brutal font-black text-cyber-cyan neon-text mb-6">
+                💬 ОТЗЫВЫ УЧАСТНИКОВ
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                Более 1000 участников уже используют AI для заработка. Вот что они говорят:
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12">
+              <div className="bg-cyber-dark/50 border border-cyber-green/30 rounded-xl p-6 sm:p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-cyber-green/20 rounded-full flex items-center justify-center text-2xl">
+                    👨‍💼
+                  </div>
+                  <div>
+                    <div className="font-bold text-cyber-green text-lg">Алексей К.</div>
+                    <div className="text-sm text-gray-400">Предприниматель</div>
+                    <div className="flex gap-1 mt-1">
+                      <span className="text-cyber-green">⭐⭐⭐⭐⭐</span>
+                    </div>
+                  </div>
+                </div>
+                <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                  "Благодаря Buddah Base я запустил свой AI-проект и зарабатываю $2000+ в месяц! 
+                  Особенно помогли готовые промпты и шаблоны автоматизации. 
+                  Александр объясняет сложные вещи простым языком."
+                </blockquote>
+                <div className="text-cyber-green font-bold">
+                  Результат за 3 месяца: +$6,000 дохода
+                </div>
+              </div>
+
+              <div className="bg-cyber-dark/50 border border-cyber-purple/30 rounded-xl p-6 sm:p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-cyber-purple/20 rounded-full flex items-center justify-center text-2xl">
+                    👩‍💻
+                  </div>
+                  <div>
+                    <div className="font-bold text-cyber-purple text-lg">Мария Д.</div>
+                    <div className="text-sm text-gray-400">Маркетолог</div>
+                    <div className="flex gap-1 mt-1">
+                      <span className="text-cyber-purple">⭐⭐⭐⭐⭐</span>
+                    </div>
+                  </div>
+                </div>
+                <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                  "Шаблоны автоматизации сэкономили мне 20+ часов в неделю. Теперь все на автомате! 
+                  Комьюнити очень активное, всегда помогут с вопросами. 
+                  База постоянно обновляется новыми материалами."
+                </blockquote>
+                <div className="text-cyber-purple font-bold">
+                  Экономия времени: 80+ часов в месяц
+                </div>
+              </div>
+
+              <div className="bg-cyber-dark/50 border border-cyber-cyan/30 rounded-xl p-6 sm:p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-cyber-cyan/20 rounded-full flex items-center justify-center text-2xl">
+                    🎨
+                  </div>
+                  <div>
+                    <div className="font-bold text-cyber-cyan text-lg">Дмитрий С.</div>
+                    <div className="text-sm text-gray-400">SMM-специалист</div>
+                    <div className="flex gap-1 mt-1">
+                      <span className="text-cyber-cyan">⭐⭐⭐⭐⭐</span>
+                    </div>
+                  </div>
+                </div>
+                <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                  "VEO 3 + промпты из базы = идеальный контент для соцсетей. Клиенты в восторге! 
+                  Качество материалов на высшем уровне. 
+                  Окупил базу уже с первого заказа."
+                </blockquote>
+                <div className="text-cyber-cyan font-bold">
+                  Окупаемость: за 1 неделю
+                </div>
+              </div>
+
+              <div className="bg-cyber-dark/50 border border-cyber-orange/30 rounded-xl p-6 sm:p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-cyber-orange/20 rounded-full flex items-center justify-center text-2xl">
+                    🚀
+                  </div>
+                  <div>
+                    <div className="font-bold text-cyber-orange text-lg">Анна В.</div>
+                    <div className="text-sm text-gray-400">AI-продюсер</div>
+                    <div className="flex gap-1 mt-1">
+                      <span className="text-cyber-orange">⭐⭐⭐⭐⭐</span>
+                    </div>
+                  </div>
+                </div>
+                <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                  "За интенсив освоил MidJourney и CapCut. Уже получил первые заказы на 50к! 
+                  Телеграм-группа - это золото. Участники делятся реальными кейсами и лайфхаками. 
+                  Александр всегда на связи."
+                </blockquote>
+                <div className="text-cyber-orange font-bold">
+                  Первый заказ: 50,000₽ за неделю
+                </div>
+              </div>
+            </div>
+
+            {/* CTA для комьюнити */}
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-cyber-green/10 via-cyber-purple/10 to-cyber-cyan/10 border border-cyber-green/30 rounded-xl p-6 sm:p-8 max-w-4xl mx-auto">
+                <h3 className="text-xl sm:text-2xl font-bold text-cyber-green mb-4">
+                  🔥 Присоединяйся к комьюнити успешных AI-предпринимателей!
+                </h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Закрытый Telegram-чат, где мы делимся кейсами, отвечаем на вопросы и помогаем друг другу зарабатывать с ИИ. 
+                  Более 1000 участников, средний доход которых вырос на 150% за первый год.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a href="https://payform.ru/4193Ie4/" className="btn-cyber btn-primary text-lg px-8 py-4">
+                    💎 AI Base за 999₽
+                  </a>
+                  <a href="https://payform.ru/ms93cWm/" className="btn-cyber btn-secondary text-lg px-8 py-4">
+                    🔥 Интенсив за 19,990₽
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced FAQ Section */}
+      <section id="faq" className="py-20 bg-cyber-dark relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-brutal font-black text-cyber-orange neon-text mb-6">
+                ❓ ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                Ответы на основные вопросы про интенсив и Buddah Base
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-xl p-6 hover:border-cyber-green transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-cyber-green/20 rounded-full flex items-center justify-center mt-1">
+                    <span className="text-cyber-green font-bold">Q</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-cyber-green mb-3">
+                      У меня нет опыта с нейросетями, подойдет ли AI Base?
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Да! AI Base создан специально для новичков. Мы разбираем все с нуля, даём готовые промпты и пошаговые инструкции. 
+                      80% участников начинали без опыта и уже через месяц создавали первые проекты.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-cyber-gray/30 border border-cyber-purple/20 rounded-xl p-6 hover:border-cyber-purple transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-cyber-purple/20 rounded-full flex items-center justify-center mt-1">
+                    <span className="text-cyber-purple font-bold">Q</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-cyber-purple mb-3">
+                      Сколько времени нужно уделять изучению материалов?
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Для базового освоения достаточно 1-2 часа в неделю. Все материалы структурированы и доступны в любое время. 
+                      Можете изучать в своем темпе. Средний участник осваивает основы за 2-3 недели.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-cyber-gray/30 border border-cyber-cyan/20 rounded-xl p-6 hover:border-cyber-cyan transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-cyber-cyan/20 rounded-full flex items-center justify-center mt-1">
+                    <span className="text-cyber-cyan font-bold">Q</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-cyber-cyan mb-3">
+                      Гарантируете ли вы результат и возможность заработка?
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      При выполнении рекомендаций из базы вы получите готовое портфолио и навыки для заработка. 
+                      Мы предоставляем 7-дневную гарантию возврата средств, если материалы не оправдают ожиданий. 
+                      95% участников довольны результатами.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-cyber-gray/30 border border-cyber-orange/20 rounded-xl p-6 hover:border-cyber-orange transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-cyber-orange/20 rounded-full flex items-center justify-center mt-1">
+                    <span className="text-cyber-orange font-bold">Q</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-cyber-orange mb-3">
+                      Какие инструменты нужны для участия в AI Base?
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Компьютер с интернетом и желание учиться! Все AI-инструменты имеют бесплатные тарифы для старта. 
+                      Мы покажем, как максимально использовать бесплатные возможности, а когда переходить на платные тарифы для масштабирования.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-xl p-6 hover:border-cyber-green transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-cyber-green/20 rounded-full flex items-center justify-center mt-1">
+                    <span className="text-cyber-green font-bold">Q</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-cyber-green mb-3">
+                      Будет ли поддержка после покупки AI Base?
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Да! При покупке AI Base на год вы получаете полную поддержку весь период подписки. 
+                      Доступ в закрытую Telegram-группу, еженедельные Q&A эфиры с разбором вопросов участников. 
+                      Александр лично отвечает на сложные вопросы. База постоянно обновляется новыми материалами в течение всего года.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-cyber-gray/30 border border-cyber-purple/20 rounded-xl p-6 hover:border-cyber-purple transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-cyber-purple/20 rounded-full flex items-center justify-center mt-1">
+                    <span className="text-cyber-purple font-bold">Q</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-cyber-purple mb-3">
+                      Чем AI Base отличается от бесплатных материалов в интернете?
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Структурированность и практичность. В интернете много разрозненной информации. 
+                      В AI Base — системный подход: от изучения инструмента до монетизации навыков. 
+                      Плюс эксклюзивные промпты, шаблоны и поддержка комьюнити.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA в FAQ */}
+            <div className="text-center mt-16">
+              <div className="bg-gradient-to-r from-cyber-green/10 via-cyber-purple/10 to-cyber-cyan/10 border border-cyber-green/30 rounded-xl p-6 sm:p-8 max-w-3xl mx-auto">
+                <h3 className="text-xl sm:text-2xl font-bold text-cyber-green mb-4">
+                  🚀 Остались вопросы? Пиши напрямую!
+                </h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Александр лично отвечает в Telegram и поможет выбрать подходящий формат обучения. 
+                  Ответ обычно приходит в течение 30 минут в рабочее время.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a href="https://t.me/smkbdh" className="btn-cyber btn-secondary text-lg px-8 py-4">
+                    💬 Написать Александру
+                  </a>
+                  <a href="https://payform.ru/4193Ie4/" className="btn-cyber btn-primary text-lg px-8 py-4">
+                    🚀 Купить AI Base сейчас
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fixed CTA Bar */}
+      <div className="fixed bottom-0 left-0 right-0 bg-cyber-dark border-t border-cyber-green z-50 p-3">
+        <div className="flex flex-wrap justify-center gap-2 max-w-6xl mx-auto">
+          <a href="https://payform.ru/ms93cWm/" className="btn-cyber btn-primary text-xs px-3 py-1">
+            🔥 Интенсив · 19,990₽
+          </a>
+          <a href="https://payform.ru/4193Ie4/" className="btn-cyber btn-secondary text-xs px-3 py-1">
+            💎 AI Base · 999₽
+          </a>
+          <a href="https://t.me/buddah_ai" className="btn-cyber btn-accent text-xs px-3 py-1">
+            📱 TG канал
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default SimpleApp;
