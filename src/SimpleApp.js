@@ -872,11 +872,9 @@ function SimpleApp() {
 
               <div className="bg-cyber-gray/30 border border-cyber-cyan/20 rounded-xl p-6 hover:border-cyber-cyan transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
-                  <img 
-                    src="https://customer-assets.emergentagent.com/job_ai-buddah/artifacts/kap146yr_Generated%20Image%20September%2006%2C%202025%20-%203_13PM-fotor-20250906151727.png" 
-                    alt="Дмитрий С." 
-                    className="w-12 h-12 rounded-full object-cover border-2 border-cyber-cyan"
-                  />
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border-2 border-cyber-cyan bg-cyber-cyan/10">
+                    🎬
+                  </div>
                   <div>
                     <div className="font-bold text-cyber-cyan">Дмитрий С.</div>
                     <div className="text-sm text-gray-400">Видеопродюсер</div>
