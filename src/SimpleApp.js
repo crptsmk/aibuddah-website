@@ -713,8 +713,8 @@ function SimpleApp() {
                     {/* Гарантии */}
                     <div className="mb-6">
                       <div className="bg-cyber-purple/10 border border-cyber-purple/30 rounded-lg p-3 mb-3">
-                        <div className="text-cyber-purple font-bold text-sm">🔒 Гарантия результата</div>
-                        <div className="text-gray-400 text-xs">Возврат средств в первые 7 дней</div>
+                        <div className="text-cyber-purple font-bold text-sm">🤝 Настоящее AI-сообщество:</div>
+                        <div className="text-gray-400 text-xs">Всегда есть кто подскажет, поддержит и замотивирует — растём и зарабатываем вместе!</div>
                       </div>
                       <div className="bg-cyber-cyan/10 border border-cyber-cyan/30 rounded-lg p-3">
                         <div className="text-cyber-cyan font-bold text-sm">⚡ Мгновенный доступ</div>
