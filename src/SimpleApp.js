@@ -750,22 +750,26 @@ function SimpleApp() {
                     <p className="text-gray-400 text-sm">Никакого спама, только ценная информация</p>
                   </div>
 
-                  <div className="space-y-4 mb-6">
-                    <input 
-                      type="text" 
-                      placeholder="Ваше имя"
-                      className="w-full bg-cyber-gray border border-cyber-cyan/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyber-cyan focus:outline-none"
-                    />
-                    <input 
-                      type="email" 
-                      placeholder="Email для получения материалов"
-                      className="w-full bg-cyber-gray border border-cyber-cyan/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyber-cyan focus:outline-none"
-                    />
+                  <div className="space-y-6 mb-6">
+                    <div className="text-center">
+                      <div className="text-lg text-gray-300 mb-4">
+                        Получи материалы прямо сейчас через нашего бота!
+                      </div>
+                      <div className="flex items-center justify-center gap-2 text-cyber-cyan mb-4">
+                        <span className="text-2xl">🤖</span>
+                        <span className="font-bold">AI Buddah Bot</span>
+                      </div>
+                    </div>
                   </div>
 
-                  <button className="btn-cyber btn-primary w-full text-lg py-4 mb-4 hover:scale-105 transition-transform">
-                    📥 СКАЧАТЬ БЕСПЛАТНО
-                  </button>
+                  <a 
+                    href="https://t.me/buddah_base_bot" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-cyber btn-primary w-full text-lg py-4 mb-4 hover:scale-105 transition-transform block text-center"
+                  >
+                    📥 ЗАБРАТЬ МАТЕРИАЛЫ
+                  </a>
 
                   <div className="text-center text-xs text-gray-400">
                     <p>🔒 Ваши данные защищены</p>
