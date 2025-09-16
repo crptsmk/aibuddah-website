@@ -1,47 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
-
-const API_BASE = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
+import { baseInfo, projects, tools, contact, intensive, testimonials, faq } from './data.js';
 
 function App() {
-  const [baseInfo, setBaseInfo] = useState(null);
-  const [projects, setProjects] = useState([]);
-  const [tools, setTools] = useState([]);
-  const [contact, setContact] = useState(null);
-  const [intensive, setIntensive] = useState(null);
-  const [testimonials, setTestimonials] = useState([]);
-  const [faq, setFaq] = useState([]);
-
-  useEffect(() => {
-    // Загружаем данные с бэкенда
-    const fetchData = async () => {
-      try {
-        const [baseRes, projectsRes, toolsRes, contactRes, intensiveRes, testimonialsRes, faqRes] = await Promise.all([
-          axios.get(`${API_BASE}/api/base-info`),
-          axios.get(`${API_BASE}/api/projects`),
-          axios.get(`${API_BASE}/api/tools`),
-          axios.get(`${API_BASE}/api/contact`),
-          axios.get(`${API_BASE}/api/intensive`),
-          axios.get(`${API_BASE}/api/testimonials`),
-          axios.get(`${API_BASE}/api/faq`)
-        ]);
-        
-        setBaseInfo(baseRes.data);
-        setProjects(projectsRes.data);
-        setTools(toolsRes.data);
-        setContact(contactRes.data);
-        setIntensive(intensiveRes.data);
-        setTestimonials(testimonialsRes.data);
-        setFaq(faqRes.data);
-      } catch (error) {
-        console.error('Ошибка загрузки данных:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   // Навигационное меню
   const Navigation = () => (

@@ -1,5 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './App.css';
+import { baseInfo, projects, tools, contact, intensive, testimonials, faq } from './data.js';
 
 function SimpleApp() {
   return (
@@ -9,7 +11,7 @@ function SimpleApp() {
         <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <img 
-              src="https://customer-assets.emergentagent.com/job_ai-buddah/artifacts/rrw7cpwp_3fd5508f-c694-4ec1-826e-3fb637a9b523.png" 
+              src="/om-ai-logo.png" 
               alt="AI Buddah Logo" 
               className="w-8 h-8 sm:w-10 sm:h-10"
             />
@@ -152,50 +154,149 @@ function SimpleApp() {
         </div>
       </section>
 
-      {/* Intensive Section */}
+      {/* Intensive Section - Полностью переработанная */}
       <section id="intensive" className="py-20 bg-gradient-to-br from-cyber-dark via-cyber-gray to-cyber-dark relative">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-brutal font-black text-cyber-orange neon-text mb-6">
-              🔥 ИНТЕНСИВ ПО НЕЙРОСЕТЯМ
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Интенсив по нейросетям от OM AI Digital Studio
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-6 mb-8">
-              <div className="bg-cyber-gray/50 border border-cyber-orange/30 rounded-lg px-4 py-2">
-                <span className="text-cyber-orange font-bold">📅 Старт: 29 сентября</span>
-              </div>
-              <div className="bg-cyber-gray/50 border border-cyber-pink/30 rounded-lg px-4 py-2">
-                <span className="text-cyber-pink font-bold">💎 Цена: 19,990₽</span>
-              </div>
-              <div className="bg-cyber-gray/50 border border-cyber-cyan/30 rounded-lg px-4 py-2">
-                <span className="text-cyber-cyan font-bold">👥 Мест: только 15</span>
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-80 h-80 bg-cyber-orange rounded-full opacity-10 blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyber-pink rounded-full opacity-10 blur-3xl animate-float"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            {/* Заголовок */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-brutal font-black text-cyber-orange neon-text mb-6">
+                🔥 ИНТЕНСИВ ПО НЕЙРОСЕТЯМ
+              </h2>
+              <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+                7 уроков = 7 шагов к созданию контента с ИИ и монетизации своих навыков
+              </p>
+              
+              {/* Афиша: дата, цена, места */}
+              <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12">
+                <div className="bg-cyber-gray/50 border border-cyber-orange/30 rounded-lg px-4 py-3">
+                  <span className="text-cyber-orange font-bold text-sm sm:text-base">📅 Старт: 29 сентября</span>
+                </div>
+                <div className="bg-cyber-gray/50 border border-cyber-pink/30 rounded-lg px-4 py-3">
+                  <span className="text-cyber-pink font-bold text-sm sm:text-base">💎 Цена: 19,990₽</span>
+                </div>
+                <div className="bg-cyber-gray/50 border border-cyber-cyan/30 rounded-lg px-4 py-3">
+                  <span className="text-cyber-cyan font-bold text-sm sm:text-base">👥 Мест: только 15</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="text-center bg-gradient-to-r from-cyber-orange/10 via-cyber-pink/10 to-cyber-orange/10 border border-cyber-orange/30 rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-cyber-orange mb-4">
-              🚀 Бронируй место прямо сейчас!
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Только 15 мест • Старт уже 29 сентября • Бонус: Google AI Pro на 12 месяцев
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://payform.ru/ms93cWm/" 
-                className="btn-cyber btn-primary text-lg px-8 py-4"
-              >
-                🔥 ПРОЙТИ ИНТЕНСИВ за 19,990₽
-              </a>
-              <a 
-                href="https://t.me/buddah_ai" 
-                className="btn-cyber btn-secondary text-lg px-8 py-4"
-              >
-                💬 Задать вопросы
-              </a>
+            <div className="grid lg:grid-cols-2 gap-12 mb-16">
+              {/* Левая колонка - Программа */}
+              <div>
+                <h3 className="text-3xl font-bold text-cyber-orange mb-8 neon-text">
+                  📚 Программа интенсива:
+                </h3>
+                
+                <div className="space-y-4">
+                  {intensive.program && intensive.program.map((lesson, index) => (
+                    <motion.div
+                      key={lesson.number}
+                      initial={{ opacity: 0, x: -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      className="bg-cyber-gray/30 border border-cyber-orange/20 rounded-lg p-4 sm:p-6 hover:border-cyber-orange transition-all duration-300 hover:animate-glow"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-cyber-orange/20 rounded-full flex items-center justify-center border border-cyber-orange/30">
+                            <span className="text-2xl">{lesson.icon}</span>
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <div className="text-cyber-orange font-bold text-lg mb-2">
+                            Урок {lesson.number}
+                          </div>
+                          <div className="text-gray-300 leading-relaxed">
+                            {lesson.title}
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Правая колонка - Результаты и формат */}
+              <div>
+                {/* Результаты */}
+                <div className="mb-8">
+                  <h3 className="text-3xl font-bold text-cyber-cyan mb-6 neon-text">
+                    🎯 Что получишь:
+                  </h3>
+                  
+                  <div className="space-y-3">
+                    {intensive.results && intensive.results.map((result, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                        className="flex items-start gap-3 p-3 bg-cyber-gray/20 border border-cyber-cyan/20 rounded-lg hover:border-cyber-cyan transition-all duration-300"
+                      >
+                        <span className="text-gray-300 leading-relaxed">{result}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Формат */}
+                <div className="bg-cyber-gray/30 border border-cyber-purple/30 rounded-xl p-6 mb-8">
+                  <h4 className="text-xl font-bold text-cyber-purple mb-4 neon-text">
+                    📋 Формат обучения:
+                  </h4>
+                  
+                  <div className="space-y-3 text-gray-300">
+                    <div className="flex items-center gap-3">
+                      <span className="text-cyber-purple">⏰</span>
+                      <span>{intensive.format && intensive.format.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-cyber-purple">📝</span>
+                      <span>{intensive.format && intensive.format.homework}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-cyber-purple">💬</span>
+                      <span>{intensive.format && intensive.format.support}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-cyber-purple">👥</span>
+                      <span>{intensive.format && intensive.format.group_size}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA блок */}
+                <div className="text-center bg-gradient-to-r from-cyber-orange/10 via-cyber-pink/10 to-cyber-orange/10 border border-cyber-orange/30 rounded-2xl p-6 sm:p-8">
+                  <h4 className="text-2xl font-bold text-cyber-orange mb-4">
+                    🚀 Бронируй место прямо сейчас!
+                  </h4>
+                  <p className="text-gray-300 mb-6">
+                    Только 15 мест • Старт уже 29 сентября
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a 
+                      href="https://payform.ru/ms93cWm/" 
+                      className="btn-cyber btn-primary text-lg px-8 py-4 hover:scale-105 transition-transform"
+                    >
+                      🔥 ПРОЙТИ ИНТЕНСИВ за 19,990₽
+                    </a>
+                    <a 
+                      href="https://t.me/buddah_ai" 
+                      className="btn-cyber btn-secondary text-lg px-8 py-4"
+                    >
+                      💬 Задать вопросы
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
