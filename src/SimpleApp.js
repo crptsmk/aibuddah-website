@@ -818,11 +818,9 @@ function SimpleApp() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-xl p-6 hover:border-cyber-green transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
-                  <img 
-                    src="https://customer-assets.emergentagent.com/job_ai-buddah/artifacts/sle364vf_860a8941-7a10-4eea-a6ed-bb3f811e306b.png" 
-                    alt="Алексей К." 
-                    className="w-12 h-12 rounded-full object-cover border-2 border-cyber-green"
-                  />
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border-2 border-cyber-green bg-cyber-green/10">
+                    📱
+                  </div>
                   <div>
                     <div className="font-bold text-cyber-green">Алексей К.</div>
                     <div className="text-sm text-gray-400">SMM-агентство</div>
