@@ -154,6 +154,171 @@ function SimpleApp() {
         </div>
       </section>
 
+      {/* AI Creative Gallery Section */}
+      <section className="py-20 bg-cyber-dark relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-20 w-96 h-96 bg-cyber-purple rounded-full opacity-5 blur-3xl animate-pulse-glow"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-cyber-cyan rounded-full opacity-5 blur-3xl animate-float"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            {/* Заголовок секции */}
+            <div className="text-center mb-16">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-4xl sm:text-5xl md:text-6xl font-brutal font-black text-cyber-green neon-text mb-6"
+              >
+                🎨 AI-КРЕАТИВЫ БУДУЩЕГО
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-8"
+              >
+                Вот какие уникальные визуалы ты сможешь создавать с помощью ИИ — 
+                или просто закажи их для своего бизнеса
+              </motion.p>
+              <div className="w-32 h-1 bg-gradient-to-r from-cyber-green via-cyber-purple to-cyber-cyan mx-auto"></div>
+            </div>
+
+            {/* Галерея изображений */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+              {[
+                {
+                  url: "https://customer-assets.emergentagent.com/job_site-analyzer-15/artifacts/4gvay63o_u7332619193_Captured_with_a_50mm_f8_lens_ISO_100_using_hard_stu_07603a1b-5fa9-49f9-9483-1e2d64b071a3.png",
+                  title: "Киберпанк портрет",
+                  description: "Стильная fashion-фотография с неоновым освещением"
+                },
+                {
+                  url: "https://customer-assets.emergentagent.com/job_site-analyzer-15/artifacts/joovvhb8_u7332619193_Captured_with_an_85mm_f2.0_lens_ISO_100_using_sligh_63483a5b-896b-4371-aa6d-665b6e735b81.png",
+                  title: "Атмосферный портрет",
+                  description: "Профессиональная портретная съёмка с драматичным освещением"
+                },
+                {
+                  url: "https://customer-assets.emergentagent.com/job_site-analyzer-15/artifacts/p2xuokh6_u7332619193_Captured_with_a_35mm_f5.6_lens_ISO_200_using_bold_f_39dcac00-6433-47c2-98b1-74a4ba2cd2d0.png",
+                  title: "Неоновая эстетика",
+                  description: "Яркие цвета и современная обработка для соцсетей"
+                },
+                {
+                  url: "https://customer-assets.emergentagent.com/job_site-analyzer-15/artifacts/8x2mf4d5_u7332619193_Captured_with_a_50mm_f2.2_lens_ISO_100_using_natura_149e419e-54aa-4549-a98d-a31a7f7d9f63.png",
+                  title: "Тёплое освещение",
+                  description: "Естественные тона с профессиональной цветокоррекцией"
+                },
+                {
+                  url: "https://customer-assets.emergentagent.com/job_site-analyzer-15/artifacts/ef1l2ulq_u7332619193_Black_and_white_monochrome_processing_high_contrast_54b4c930-b4c3-4e8d-b452-55968ac1a9e0.png",
+                  title: "Монохромная магия",
+                  description: "Классическая чёрно-белая обработка с высоким контрастом"
+                }
+              ].map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group relative bg-cyber-gray border border-cyber-green/20 rounded-xl overflow-hidden hover:border-cyber-green transition-all duration-500 hover:animate-glow"
+                >
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={image.url}
+                      alt={image.title}
+                      className="w-full h-64 sm:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-cyber-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  
+                  <div className="p-4 sm:p-6">
+                    <h3 className="text-lg sm:text-xl font-bold text-cyber-green mb-2 group-hover:text-cyber-cyan transition-colors">
+                      {image.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                      {image.description}
+                    </p>
+                  </div>
+                  
+                  {/* Hover эффект */}
+                  <div className="absolute inset-0 bg-cyber-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Статистика и призыв к действию */}
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="text-4xl sm:text-5xl font-black text-cyber-purple mb-2">300%</div>
+                <div className="text-gray-300">Увеличение вовлечённости</div>
+                <div className="text-sm text-gray-500">с AI-контентом</div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="text-center"
+              >
+                <div className="text-4xl sm:text-5xl font-black text-cyber-cyan mb-2">15 мин</div>
+                <div className="text-gray-300">Время создания</div>
+                <div className="text-sm text-gray-500">вместо 5 часов</div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-center"
+              >
+                <div className="text-4xl sm:text-5xl font-black text-cyber-orange mb-2">$50+</div>
+                <div className="text-gray-300">Стоимость креатива</div>
+                <div className="text-sm text-gray-500">на фрилансе</div>
+              </motion.div>
+            </div>
+
+            {/* CTA блок */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="text-center bg-gradient-to-r from-cyber-green/10 via-cyber-purple/10 to-cyber-cyan/10 border border-cyber-green/30 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto"
+            >
+              <h3 className="text-2xl sm:text-3xl font-bold text-cyber-green mb-4">
+                🚀 Создавай такие же шедевры!
+              </h3>
+              <p className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
+                Освой MidJourney, ChatGPT и другие AI-инструменты за 2 недели. 
+                Создавай уникальный контент и зарабатывай от $500 в месяц.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a 
+                  href="https://payform.ru/ms93cWm/" 
+                  className="btn-cyber btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
+                >
+                  🔥 Пройти интенсив за 19,990₽
+                </a>
+                <a 
+                  href="https://payform.ru/4193Ie4/" 
+                  className="btn-cyber btn-secondary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
+                >
+                  💎 AI Base за 999₽
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Intensive Section - Полностью переработанная */}
       <section id="intensive" className="py-20 bg-gradient-to-br from-cyber-dark via-cyber-gray to-cyber-dark relative">
         <div className="absolute inset-0">
