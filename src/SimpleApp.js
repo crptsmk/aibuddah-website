@@ -521,11 +521,11 @@ function SimpleApp() {
               className="mb-16"
             >
               <div className="text-center mb-8">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-brutal font-black text-cyber-green neon-text mb-4">
-                  🎥 ПОСМОТРИ КАК ЭТО РАБОТАЕТ
+                <h2 className="text-4xl sm:text-5xl md:text-7xl font-brutal font-black text-cyber-green neon-text mb-6">
+                  AI BUDDAH BASE
                 </h2>
-                <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-                  14-секундная демонстрация возможностей AI Base
+                <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                  Твой быстрый старт в современный контент: видео, креативы, автоматизация под ключ.
                 </p>
               </div>
               
@@ -548,6 +548,22 @@ function SimpleApp() {
                 <div className="absolute -bottom-4 -left-4 w-8 h-8 border-l-2 border-b-2 border-cyber-green rounded-bl-lg"></div>
                 <div className="absolute -bottom-4 -right-4 w-8 h-8 border-r-2 border-b-2 border-cyber-green rounded-br-lg"></div>
               </div>
+
+              {/* Связующий блок после видео */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                className="text-center mt-12 mb-16"
+              >
+                <div className="max-w-3xl mx-auto">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyber-cyan mb-4">
+                    <span className="text-cyber-orange">Хочешь так же?</span> Всё, что нужно — уже внутри AI Base!
+                  </h3>
+                  <div className="w-24 h-1 bg-gradient-to-r from-cyber-orange via-cyber-cyan to-cyber-green mx-auto"></div>
+                </div>
+              </motion.div>
             </motion.div>
 
             {/* Основной контент AI Base */}
@@ -558,12 +574,9 @@ function SimpleApp() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-            {/* Заголовок с УТП */}
+            {/* Описание экосистемы */}
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl md:text-7xl font-brutal font-black text-cyber-green neon-text mb-6">
-                AI BUDDAH BASE
-              </h2>
-              <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-5xl mx-auto mb-8 leading-relaxed">
+              <p className="text-xl sm:text-2xl text-gray-300 max-w-5xl mx-auto mb-8 leading-relaxed">
                 Закрытая цифровая экосистема для быстрого освоения нейросетей, прокачки автоматизации и превращения знаний в <span className="text-cyber-green font-bold">реальные деньги</span>
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
