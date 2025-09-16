@@ -4,6 +4,41 @@ import './App.css';
 import { baseInfo, projects, tools, contact, intensive, testimonials, faq } from './data.js';
 
 function SimpleApp() {
+  
+  // Intersection Observer для автозапуска YouTube видео
+  useEffect(() => {
+    const videoBlock = document.getElementById('ai-base-video-block');
+    const iframe = document.getElementById('ai-base-youtube-video');
+    let hasPlayed = false;
+
+    if (videoBlock && iframe) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasPlayed) {
+            // Добавляем autoplay к src видео
+            iframe.src = iframe.src.replace('mute=1', 'mute=1&autoplay=1');
+            hasPlayed = true;
+            
+            // Опционально: убираем observer после первого запуска
+            observer.unobserve(videoBlock);
+          }
+        });
+      }, {
+        threshold: 0.5, // Запускаем когда 50% блока видно
+        rootMargin: '0px'
+      });
+
+      observer.observe(videoBlock);
+
+      // Cleanup function
+      return () => {
+        if (observer) {
+          observer.disconnect();
+        }
+      };
+    }
+  }, []);
+
   return (
     <div className="bg-cyber-dark text-white min-h-screen">
       {/* Navigation - С фирменным логотипом */}
