@@ -467,7 +467,7 @@ function SimpleApp() {
         </div>
       </section>
 
-      {/* Buddah Base Section - Полностью переработанная */}
+      {/* Buddah Base Section - С автозапуском YouTube видео */}
       <section id="buddah-base" className="py-20 bg-gradient-cyber relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-96 h-96 bg-cyber-purple rounded-full opacity-10 blur-3xl animate-pulse"></div>
@@ -476,6 +476,53 @@ function SimpleApp() {
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
+            
+            {/* YouTube Video Block */}
+            <motion.div
+              id="ai-base-video-block"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <div className="text-center mb-8">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-brutal font-black text-cyber-green neon-text mb-4">
+                  🎥 ПОСМОТРИ КАК ЭТО РАБОТАЕТ
+                </h2>
+                <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                  14-секундная демонстрация возможностей AI Base
+                </p>
+              </div>
+              
+              <div className="relative max-w-4xl mx-auto">
+                <div className="relative aspect-video bg-cyber-gray/30 border border-cyber-green/20 rounded-2xl overflow-hidden hover:border-cyber-green transition-all duration-300">
+                  <iframe
+                    id="ai-base-youtube-video"
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/OGHdUrV6jvU?mute=1&rel=0&modestbranding=1&playsinline=1"
+                    title="AI Base Demo - Как работать с нейросетями"
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                
+                {/* Декоративные элементы вокруг видео */}
+                <div className="absolute -top-4 -left-4 w-8 h-8 border-l-2 border-t-2 border-cyber-green rounded-tl-lg"></div>
+                <div className="absolute -top-4 -right-4 w-8 h-8 border-r-2 border-t-2 border-cyber-green rounded-tr-lg"></div>
+                <div className="absolute -bottom-4 -left-4 w-8 h-8 border-l-2 border-b-2 border-cyber-green rounded-bl-lg"></div>
+                <div className="absolute -bottom-4 -right-4 w-8 h-8 border-r-2 border-b-2 border-cyber-green rounded-br-lg"></div>
+              </div>
+            </motion.div>
+
+            {/* Основной контент AI Base */}
+            <motion.div
+              id="ai-base-main-content"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
             {/* Заголовок с УТП */}
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl md:text-7xl font-brutal font-black text-cyber-green neon-text mb-6">
