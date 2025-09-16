@@ -759,6 +759,7 @@ function SimpleApp() {
                 💎 Начать зарабатывать сегодня
               </a>
             </div>
+            </motion.div>
           </div>
         </div>
       </section>
