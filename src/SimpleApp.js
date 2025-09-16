@@ -845,11 +845,9 @@ function SimpleApp() {
 
               <div className="bg-cyber-gray/30 border border-cyber-purple/20 rounded-xl p-6 hover:border-cyber-purple transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
-                  <img 
-                    src="https://customer-assets.emergentagent.com/job_ai-buddah/artifacts/0qq4vjid_ChatGPT%20Image%20Jul%206%2C%202025%2C%2004_05_00%20AM.png" 
-                    alt="Мария Д." 
-                    className="w-12 h-12 rounded-full object-cover border-2 border-cyber-purple"
-                  />
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border-2 border-cyber-purple bg-cyber-purple/10">
+                    💼
+                  </div>
                   <div>
                     <div className="font-bold text-cyber-purple">Мария Д.</div>
                     <div className="text-sm text-gray-400">Фриланс-маркетолог</div>
