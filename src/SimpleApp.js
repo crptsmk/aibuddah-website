@@ -183,7 +183,7 @@ function SimpleApp() {
       </motion.section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-cyber-gray relative">
+      <motion.section id="about" className="py-20 bg-cyber-gray relative">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
