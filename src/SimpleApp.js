@@ -1108,7 +1108,7 @@ function SimpleApp() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Enhanced Testimonials Section */}
       <section id="testimonials" className="py-20 bg-cyber-gray relative overflow-hidden">
