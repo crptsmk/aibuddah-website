@@ -173,7 +173,7 @@ function SimpleApp() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-brutal font-black text-cyber-green neon-text mb-4 sm:mb-6"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-brutal font-black text-cyber-green neon-text mb-3 sm:mb-4 md:mb-6"
           >
             AI BUDDAH
           </motion.div>
@@ -182,14 +182,14 @@ function SimpleApp() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="w-24 sm:w-32 h-1 bg-gradient-to-r from-cyber-green via-cyber-purple to-cyber-cyan mx-auto mb-6 sm:mb-8"
+            className="w-16 sm:w-24 md:w-32 h-1 bg-gradient-to-r from-cyber-green via-cyber-purple to-cyber-cyan mx-auto mb-4 sm:mb-6 md:mb-8"
           ></motion.div>
 
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold mb-4 sm:mb-6 max-w-5xl mx-auto leading-tight px-2"
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold mb-3 sm:mb-4 md:mb-6 max-w-5xl mx-auto leading-relaxed px-2"
           >
             <span className="text-white">Интенсив по AI от эксперта </span>
             <span className="text-cyber-green">Александра</span>
