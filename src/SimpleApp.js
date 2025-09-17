@@ -51,8 +51,8 @@ function SimpleApp() {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       
-      // Показываем кнопку "Наверх" после скролла на 2-3 экрана
-      setShowScrollTop(scrollTop > 1500);
+      // Показываем кнопку "Наверх" после скролла на 1 экран (800px)
+      setShowScrollTop(scrollTop > 800);
     };
 
     window.addEventListener('scroll', handleScroll);
