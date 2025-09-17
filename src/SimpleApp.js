@@ -1681,7 +1681,10 @@ function SimpleApp() {
               </p>
             </div>
 
-            <div className="space-y-6">
+            {/* FAQ - Адаптивная карусель */}
+            <div className="relative">
+              {/* Десктопная версия - список */}
+              <div className="hidden md:block space-y-6">
               <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-xl p-6 hover:border-cyber-green transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-8 h-8 bg-cyber-green/20 rounded-full flex items-center justify-center mt-1">
@@ -1689,11 +1692,11 @@ function SimpleApp() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-cyber-green mb-3">
-                      У меня нет опыта с нейросетями, подойдет ли AI Base?
+                      Что входит в AI Base и как быстро я увижу результаты?
                     </h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Да! AI Base создан специально для новичков. Мы разбираем все с нуля, даём готовые промпты и пошаговые инструкции. 
-                      80% участников начинали без опыта и уже через месяц создавали первые проекты.
+                      База включает 500+ готовых промптов, видеоуроки по всем топовым нейросетям, шаблоны автоматизации и закрытое комьюнити. 
+                      Первые результаты участники видят уже в первую неделю, применяя готовые решения.
                     </p>
                   </div>
                 </div>
@@ -1706,11 +1709,11 @@ function SimpleApp() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-cyber-purple mb-3">
-                      Сколько времени нужно уделять изучению материалов?
+                      Подходит ли база новичкам без опыта работы с ИИ?
                     </h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Для базового освоения достаточно 1-2 часа в неделю. Все материалы структурированы и доступны в любое время. 
-                      Можете изучать в своем темпе. Средний участник осваивает основы за 2-3 недели.
+                      Да! 70% участников — полные новички. База построена по принципу «от простого к сложному». 
+                      Начинаете с базовых промптов, затем изучаете продвинутые техники и автоматизацию.
                     </p>
                   </div>
                 </div>
@@ -1758,12 +1761,11 @@ function SimpleApp() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-cyber-green mb-3">
-                      Будет ли поддержка после покупки AI Base?
+                      На сколько хватает доступа к AI Base?
                     </h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Да! При покупке AI Base на год вы получаете полную поддержку весь период подписки. 
-                      Доступ в закрытую Telegram-группу, еженедельные Q&A эфиры с разбором вопросов участников. 
-                      Александр лично отвечает на сложные вопросы. База постоянно обновляется новыми материалами в течение всего года.
+                      Доступ предоставляется на 1 год с момента покупки. За это время база пополняется 50+ новыми материалами. 
+                      После окончания можно продлить участие со скидкой 50%.
                     </p>
                   </div>
                 </div>
@@ -1776,14 +1778,181 @@ function SimpleApp() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-cyber-purple mb-3">
-                      Чем AI Base отличается от бесплатных материалов в интернете?
+                      Есть ли поддержка и как быстро отвечают на вопросы?
                     </h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Структурированность и практичность. В интернете много разрозненной информации. 
-                      В AI Base — системный подход: от изучения инструмента до монетизации навыков. 
-                      Плюс эксклюзивные промпты, шаблоны и поддержка комьюнити.
+                      В базе активное комьюнити из 1000+ участников + персональная поддержка от экспертов. 
+                      На вопросы отвечают в течение 2-4 часов. Еженедельные разборы кейсов и Q&A сессии.
                     </p>
                   </div>
+                </div>
+              </div>
+              </div>
+
+              {/* Мобильная версия - карусель */}
+              <div className="md:hidden">
+                <div className="overflow-hidden rounded-xl">
+                  <motion.div 
+                    className="flex transition-transform duration-300 ease-out"
+                    style={{ transform: `translateX(-${currentFaq * 100}%)` }}
+                  >
+                    {/* FAQ 1 */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-xl p-6">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 bg-cyber-green/20 rounded-full flex items-center justify-center mt-1">
+                            <span className="text-cyber-green font-bold">Q</span>
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg font-bold text-cyber-green mb-3">
+                              Что входит в AI Base?
+                            </h3>
+                            <p className="text-gray-300 leading-relaxed">
+                              500+ готовых промптов, видеоуроки по всем топовым нейросетям, шаблоны автоматизации и закрытое комьюнити. 
+                              Первые результаты уже в первую неделю!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* FAQ 2 */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-gray/30 border border-cyber-purple/20 rounded-xl p-6">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 bg-cyber-purple/20 rounded-full flex items-center justify-center mt-1">
+                            <span className="text-cyber-purple font-bold">Q</span>
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg font-bold text-cyber-purple mb-3">
+                              Подходит ли новичкам?
+                            </h3>
+                            <p className="text-gray-300 leading-relaxed">
+                              Да! 70% участников — полные новички. База построена по принципу «от простого к сложному». 
+                              Начинаете с базовых промптов, затем изучаете продвинутые техники.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* FAQ 3 */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-gray/30 border border-cyber-cyan/20 rounded-xl p-6">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 bg-cyber-cyan/20 rounded-full flex items-center justify-center mt-1">
+                            <span className="text-cyber-cyan font-bold">Q</span>
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg font-bold text-cyber-cyan mb-3">
+                              Есть ли гарантии?
+                            </h3>
+                            <p className="text-gray-300 leading-relaxed">
+                              7-дневная гарантия возврата средств, если материалы не оправдают ожиданий. 
+                              95% участников довольны результатами и остаются в сообществе.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* FAQ 4 */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-gray/30 border border-cyber-orange/20 rounded-xl p-6">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 bg-cyber-orange/20 rounded-full flex items-center justify-center mt-1">
+                            <span className="text-cyber-orange font-bold">Q</span>
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg font-bold text-cyber-orange mb-3">
+                              Какие инструменты нужны?
+                            </h3>
+                            <p className="text-gray-300 leading-relaxed">
+                              Компьютер с интернетом и желание учиться! Все AI-инструменты имеют бесплатные тарифы для старта. 
+                              Покажем, как использовать бесплатные возможности.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* FAQ 5 */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-xl p-6">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 bg-cyber-green/20 rounded-full flex items-center justify-center mt-1">
+                            <span className="text-cyber-green font-bold">Q</span>
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg font-bold text-cyber-green mb-3">
+                              На сколько доступ?
+                            </h3>
+                            <p className="text-gray-300 leading-relaxed">
+                              Доступ на 1 год с момента покупки. База пополняется 50+ новыми материалами. 
+                              После окончания можно продлить со скидкой 50%.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* FAQ 6 */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-gray/30 border border-cyber-purple/20 rounded-xl p-6">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-8 h-8 bg-cyber-purple/20 rounded-full flex items-center justify-center mt-1">
+                            <span className="text-cyber-purple font-bold">Q</span>
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg font-bold text-cyber-purple mb-3">
+                              Есть ли поддержка?
+                            </h3>
+                            <p className="text-gray-300 leading-relaxed">
+                              Активное комьюнити 1000+ участников + персональная поддержка экспертов. 
+                              Ответы в течение 2-4 часов, еженедельные разборы кейсов.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Навигация карусели FAQ */}
+                <div className="flex items-center justify-center mt-6 gap-4">
+                  <button 
+                    onClick={() => setCurrentFaq(Math.max(0, currentFaq - 1))}
+                    className="p-2 rounded-full bg-cyber-orange/20 text-cyber-orange hover:bg-cyber-orange/30 transition-all disabled:opacity-50"
+                    disabled={currentFaq === 0}
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  
+                  <div className="flex gap-2">
+                    {[0, 1, 2, 3, 4, 5].map((index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentFaq(index)}
+                        className={`w-3 h-3 rounded-full transition-all ${
+                          currentFaq === index 
+                            ? 'bg-cyber-orange' 
+                            : 'bg-gray-600 hover:bg-gray-500'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  
+                  <button 
+                    onClick={() => setCurrentFaq(Math.min(5, currentFaq + 1))}
+                    className="p-2 rounded-full bg-cyber-orange/20 text-cyber-orange hover:bg-cyber-orange/30 transition-all disabled:opacity-50"
+                    disabled={currentFaq === 5}
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
