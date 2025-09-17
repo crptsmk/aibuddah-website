@@ -113,10 +113,10 @@ function SimpleApp() {
             <a href="#lead-magnet" className="btn-cyber btn-accent text-xs px-3 py-2">
               🎁 FREE
             </a>
-            <a href="#buddah-base" className="btn-cyber btn-secondary text-xs px-3 py-2">
+            <a href="#buddah-base" className="btn-cyber btn-secondary text-xs px-3 py-3 min-h-[44px] flex items-center">
               Base
             </a>
-            <a href="https://payform.ru/ms93cWm/" className="btn-cyber btn-primary text-xs px-3 py-2">
+            <a href="https://payform.ru/ms93cWm/" className="btn-cyber btn-primary text-xs px-3 py-3 min-h-[44px] flex items-center">
               🔥 Курс
             </a>
           </div>
