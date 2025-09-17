@@ -822,7 +822,7 @@ function SimpleApp() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Lead Magnet Section - НОВЫЙ БЛОК */}
       <section id="lead-magnet" className="py-20 bg-cyber-gray relative overflow-hidden">
