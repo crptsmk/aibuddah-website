@@ -141,7 +141,8 @@ function SimpleApp() {
               minWidth: '100%',
               minHeight: '100%',
               maxWidth: 'none',
-              objectFit: 'cover'
+              objectFit: 'cover',
+              filter: 'blur(5px)'
             }}
           />
           {/* Минимальный темный overlay только для читаемости текста */}
