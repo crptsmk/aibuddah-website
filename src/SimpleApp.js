@@ -125,14 +125,24 @@ function SimpleApp() {
             <span className="text-white"> — продюсера </span>
             <span className="text-cyber-purple">digital-продуктов</span>
             <span className="text-white"> и автоматизатора бизнеса</span>
-          </h2>
+          </motion.h2>
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-2">
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+            className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-2"
+          >
             Изучи <strong className="text-cyber-green">MidJourney, ChatGPT, Veo 3</strong> и создавай системы автоматизации: 
             от ботов и автоворонок до AI-контента и маркетплейсов
-          </p>
+          </motion.p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-12 max-w-4xl mx-auto px-2">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-12 max-w-4xl mx-auto px-2"
+          >
             <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-lg p-3 sm:p-4">
               <div className="text-cyber-green text-xl sm:text-2xl mb-2">⚡</div>
               <div className="text-sm font-bold text-cyber-green">За 2 недели</div>
