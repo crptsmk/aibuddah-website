@@ -5,6 +5,9 @@ import { baseInfo, projects, tools, contact, intensive, testimonials, faq } from
 
 function SimpleApp() {
   
+  // Состояние для кнопки "Наверх"
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
   // Intersection Observer для автозапуска YouTube видео
   useEffect(() => {
     const videoBlock = document.getElementById('ai-base-video-block');
@@ -38,6 +41,29 @@ function SimpleApp() {
       };
     }
   }, []);
+
+  // Обработка скролла для кнопки "Наверх"
+  useEffect(() => {
+    const handleScroll = () => {
+      // Показываем кнопку после скролла на 2-3 экрана (примерно 1500px)
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setShowScrollTop(scrollTop > 1500);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Функция плавного скролла наверх
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <div className="bg-cyber-dark text-white min-h-screen">
