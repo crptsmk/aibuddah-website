@@ -180,7 +180,7 @@ function SimpleApp() {
             </a>
           </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* About Section */}
       <section id="about" className="py-20 bg-cyber-gray relative">
