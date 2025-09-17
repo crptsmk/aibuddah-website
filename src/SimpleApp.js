@@ -82,9 +82,19 @@ function SimpleApp() {
       </nav>
 
       {/* Hero Section - Улучшенная мобильная адаптация */}
-      <section className="min-h-screen relative flex items-center justify-center pt-16 sm:pt-20">
+      <motion.section 
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="min-h-screen relative flex items-center justify-center pt-16 sm:pt-20"
+      >
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-brutal font-black text-cyber-green neon-text mb-6 sm:mb-8 leading-tight">
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-brutal font-black text-cyber-green neon-text mb-6 sm:mb-8 leading-tight"
+          >
             Обучение нейросетям и ChatGPT с нуля за 2 недели
           </h1>
           
