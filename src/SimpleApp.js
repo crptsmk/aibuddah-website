@@ -158,9 +158,14 @@ function SimpleApp() {
               <div className="text-sm font-bold text-cyber-cyan">Монетизация</div>
               <div className="text-xs text-gray-400">Реальные навыки</div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4"
+          >
             <a 
               href="https://payform.ru/4193Ie4/" 
               className="btn-cyber btn-primary text-base sm:text-lg lg:text-xl px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto hover:scale-105 transition-transform"
@@ -173,7 +178,7 @@ function SimpleApp() {
             >
               📱 Бесплатный Telegram-канал
             </a>
-          </div>
+          </motion.div>
         </div>
       </section>
 
