@@ -1004,85 +1004,220 @@ function SimpleApp() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-xl p-6 hover:border-cyber-green transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border-2 border-cyber-green bg-cyber-green/10">
-                    📱
+            {/* Карусель кейсов участников */}
+            <div className="relative">
+              {/* Десктопная версия - сетка */}
+              <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-xl p-6 hover:border-cyber-green transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border-2 border-cyber-green bg-cyber-green/10">
+                      📱
+                    </div>
+                    <div>
+                      <div className="font-bold text-cyber-green">Алексей К.</div>
+                      <div className="text-sm text-gray-400">SMM-агентство</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-bold text-cyber-green">Алексей К.</div>
-                    <div className="text-sm text-gray-400">SMM-агентство</div>
+                  <div className="mb-4">
+                    <div className="bg-cyber-green/10 border border-cyber-green/30 rounded-lg p-3 mb-3">
+                      <div className="text-cyber-green font-bold text-center">ДО vs ПОСЛЕ</div>
+                      <div className="text-xs text-gray-400 text-center">5 часов на пост → 30 минут</div>
+                    </div>
+                    <div className="text-2xl font-bold text-cyber-green mb-2">$3,200/мес</div>
+                    <div className="text-sm text-gray-300">
+                      "Создаю контент для клиентов в 10 раз быстрее! MidJourney + шаблоны = волшебство 🚀"
+                    </div>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <span className="text-xs bg-cyber-green/10 text-cyber-green px-2 py-1 rounded">MidJourney</span>
+                    <span className="text-xs bg-cyber-green/10 text-cyber-green px-2 py-1 rounded">ChatGPT</span>
                   </div>
                 </div>
-                <div className="mb-4">
-                  <div className="bg-cyber-green/10 border border-cyber-green/30 rounded-lg p-3 mb-3">
-                    <div className="text-cyber-green font-bold text-center">ДО vs ПОСЛЕ</div>
-                    <div className="text-xs text-gray-400 text-center">5 часов на пост → 30 минут</div>
+
+                <div className="bg-cyber-gray/30 border border-cyber-purple/20 rounded-xl p-6 hover:border-cyber-purple transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border-2 border-cyber-purple bg-cyber-purple/10">
+                      💼
+                    </div>
+                    <div>
+                      <div className="font-bold text-cyber-purple">Мария Д.</div>
+                      <div className="text-sm text-gray-400">Фриланс-маркетолог</div>
+                    </div>
                   </div>
-                  <div className="text-2xl font-bold text-cyber-green mb-2">$3,200/мес</div>
-                  <div className="text-sm text-gray-300">
-                    Создание контента с MidJourney + ChatGPT для 8 брендов. 
-                    Время на проект сократилось в 10 раз!
+                  <div className="mb-4">
+                    <div className="bg-cyber-purple/10 border border-cyber-purple/30 rounded-lg p-3 mb-3">
+                      <div className="text-cyber-purple font-bold text-center">РЕЗУЛЬТАТ</div>
+                      <div className="text-xs text-gray-400 text-center">25 часов в неделю экономии</div>
+                    </div>
+                    <div className="text-2xl font-bold text-cyber-purple mb-2">$2,800/мес</div>
+                    <div className="text-sm text-gray-300">
+                      "n8n автоматизация изменила всё! Теперь работаю в 3 раза эффективнее 💜"
+                    </div>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <span className="text-xs bg-cyber-purple/10 text-cyber-purple px-2 py-1 rounded">n8n</span>
+                    <span className="text-xs bg-cyber-purple/10 text-cyber-purple px-2 py-1 rounded">Автоматизация</span>
                   </div>
                 </div>
-                <div className="flex gap-2 flex-wrap">
-                  <span className="text-xs bg-cyber-green/10 text-cyber-green px-2 py-1 rounded">MidJourney</span>
-                  <span className="text-xs bg-cyber-green/10 text-cyber-green px-2 py-1 rounded">ChatGPT</span>
+
+                <div className="bg-cyber-gray/30 border border-cyber-cyan/20 rounded-xl p-6 hover:border-cyber-cyan transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border-2 border-cyber-cyan bg-cyber-cyan/10">
+                      🎬
+                    </div>
+                    <div>
+                      <div className="font-bold text-cyber-cyan">Дмитрий С.</div>
+                      <div className="text-sm text-gray-400">Видеопродюсер</div>
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <div className="bg-cyber-cyan/10 border border-cyber-cyan/30 rounded-lg p-3 mb-3">
+                      <div className="text-cyber-cyan font-bold text-center">ДОСТИЖЕНИЕ</div>
+                      <div className="text-xs text-gray-400 text-center">Собственная AI-студия</div>
+                    </div>
+                    <div className="text-2xl font-bold text-cyber-cyan mb-2">$4,500/мес</div>
+                    <div className="text-sm text-gray-300">
+                      "Veo 3 сократил время на монтаж с недель до часов! Заказчики в шоке от качества 🎬"
+                    </div>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <span className="text-xs bg-cyber-cyan/10 text-cyber-cyan px-2 py-1 rounded">Veo 3</span>
+                    <span className="text-xs bg-cyber-cyan/10 text-cyber-cyan px-2 py-1 rounded">CapCut</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="bg-cyber-gray/30 border border-cyber-purple/20 rounded-xl p-6 hover:border-cyber-purple transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border-2 border-cyber-purple bg-cyber-purple/10">
-                    💼
-                  </div>
-                  <div>
-                    <div className="font-bold text-cyber-purple">Мария Д.</div>
-                    <div className="text-sm text-gray-400">Фриланс-маркетолог</div>
-                  </div>
-                </div>
-                <div className="mb-4">
-                  <div className="bg-cyber-purple/10 border border-cyber-purple/30 rounded-lg p-3 mb-3">
-                    <div className="text-cyber-purple font-bold text-center">РЕЗУЛЬТАТ</div>
-                    <div className="text-xs text-gray-400 text-center">25 часов в неделю экономии</div>
-                  </div>
-                  <div className="text-2xl font-bold text-cyber-purple mb-2">$2,800/мес</div>
-                  <div className="text-sm text-gray-300">
-                    Автоматизация email-воронок через n8n. 
-                    Увеличила доходы в 3 раза при меньших трудозатратах.
-                  </div>
-                </div>
-                <div className="flex gap-2 flex-wrap">
-                  <span className="text-xs bg-cyber-purple/10 text-cyber-purple px-2 py-1 rounded">n8n</span>
-                  <span className="text-xs bg-cyber-purple/10 text-cyber-purple px-2 py-1 rounded">Автоматизация</span>
-                </div>
-              </div>
+              {/* Мобильная версия - карусель */}
+              <div className="md:hidden">
+                <div className="overflow-hidden rounded-xl">
+                  <motion.div 
+                    className="flex transition-transform duration-300 ease-out"
+                    style={{ transform: `translateX(-${currentCase * 100}%)` }}
+                  >
+                    {/* Кейс 1 - Алексей */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-gray/30 border border-cyber-green/20 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border-2 border-cyber-green bg-cyber-green/10">
+                            📱
+                          </div>
+                          <div>
+                            <div className="font-bold text-cyber-green">Алексей К.</div>
+                            <div className="text-sm text-gray-400">SMM-агентство</div>
+                          </div>
+                        </div>
+                        <div className="mb-4">
+                          <div className="bg-cyber-green/10 border border-cyber-green/30 rounded-lg p-3 mb-3">
+                            <div className="text-cyber-green font-bold text-center">ДО vs ПОСЛЕ</div>
+                            <div className="text-xs text-gray-400 text-center">5 часов на пост → 30 минут</div>
+                          </div>
+                          <div className="text-2xl font-bold text-cyber-green mb-2">$3,200/мес</div>
+                          <div className="text-sm text-gray-300">
+                            "Создаю контент для клиентов в 10 раз быстрее! MidJourney + шаблоны = волшебство 🚀"
+                          </div>
+                        </div>
+                        <div className="flex gap-2 flex-wrap">
+                          <span className="text-xs bg-cyber-green/10 text-cyber-green px-2 py-1 rounded">MidJourney</span>
+                          <span className="text-xs bg-cyber-green/10 text-cyber-green px-2 py-1 rounded">ChatGPT</span>
+                        </div>
+                      </div>
+                    </div>
 
-              <div className="bg-cyber-gray/30 border border-cyber-cyan/20 rounded-xl p-6 hover:border-cyber-cyan transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border-2 border-cyber-cyan bg-cyber-cyan/10">
-                    🎬
-                  </div>
-                  <div>
-                    <div className="font-bold text-cyber-cyan">Дмитрий С.</div>
-                    <div className="text-sm text-gray-400">Видеопродюсер</div>
-                  </div>
+                    {/* Кейс 2 - Мария */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-gray/30 border border-cyber-purple/20 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border-2 border-cyber-purple bg-cyber-purple/10">
+                            💼
+                          </div>
+                          <div>
+                            <div className="font-bold text-cyber-purple">Мария Д.</div>
+                            <div className="text-sm text-gray-400">Фриланс-маркетолог</div>
+                          </div>
+                        </div>
+                        <div className="mb-4">
+                          <div className="bg-cyber-purple/10 border border-cyber-purple/30 rounded-lg p-3 mb-3">
+                            <div className="text-cyber-purple font-bold text-center">РЕЗУЛЬТАТ</div>
+                            <div className="text-xs text-gray-400 text-center">25 часов в неделю экономии</div>
+                          </div>
+                          <div className="text-2xl font-bold text-cyber-purple mb-2">$2,800/мес</div>
+                          <div className="text-sm text-gray-300">
+                            "n8n автоматизация изменила всё! Теперь работаю в 3 раза эффективнее 💜"
+                          </div>
+                        </div>
+                        <div className="flex gap-2 flex-wrap">
+                          <span className="text-xs bg-cyber-purple/10 text-cyber-purple px-2 py-1 rounded">n8n</span>
+                          <span className="text-xs bg-cyber-purple/10 text-cyber-purple px-2 py-1 rounded">Автоматизация</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Кейс 3 - Дмитрий */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-gray/30 border border-cyber-cyan/20 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl border-2 border-cyber-cyan bg-cyber-cyan/10">
+                            🎬
+                          </div>
+                          <div>
+                            <div className="font-bold text-cyber-cyan">Дмитрий С.</div>
+                            <div className="text-sm text-gray-400">Видеопродюсер</div>
+                          </div>
+                        </div>
+                        <div className="mb-4">
+                          <div className="bg-cyber-cyan/10 border border-cyber-cyan/30 rounded-lg p-3 mb-3">
+                            <div className="text-cyber-cyan font-bold text-center">ДОСТИЖЕНИЕ</div>
+                            <div className="text-xs text-gray-400 text-center">Собственная AI-студия</div>
+                          </div>
+                          <div className="text-2xl font-bold text-cyber-cyan mb-2">$4,500/мес</div>
+                          <div className="text-sm text-gray-300">
+                            "Veo 3 сократил время на монтаж с недель до часов! Заказчики в шоке от качества 🎬"
+                          </div>
+                        </div>
+                        <div className="flex gap-2 flex-wrap">
+                          <span className="text-xs bg-cyber-cyan/10 text-cyber-cyan px-2 py-1 rounded">Veo 3</span>
+                          <span className="text-xs bg-cyber-cyan/10 text-cyber-cyan px-2 py-1 rounded">CapCut</span>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
                 </div>
-                <div className="mb-4">
-                  <div className="bg-cyber-cyan/10 border border-cyber-cyan/30 rounded-lg p-3 mb-3">
-                    <div className="text-cyber-cyan font-bold text-center">ДОСТИЖЕНИЕ</div>
-                    <div className="text-xs text-gray-400 text-center">Собственная AI-студия</div>
+
+                {/* Индикаторы и кнопки навигации */}
+                <div className="flex items-center justify-center mt-6 gap-4">
+                  <button 
+                    onClick={() => setCurrentCase(Math.max(0, currentCase - 1))}
+                    className="p-2 rounded-full bg-cyber-green/20 text-cyber-green hover:bg-cyber-green/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled={currentCase === 0}
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  
+                  <div className="flex gap-2">
+                    {[0, 1, 2].map((index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentCase(index)}
+                        className={`w-3 h-3 rounded-full transition-all ${
+                          currentCase === index 
+                            ? 'bg-cyber-green' 
+                            : 'bg-gray-600 hover:bg-gray-500'
+                        }`}
+                      />
+                    ))}
                   </div>
-                  <div className="text-2xl font-bold text-cyber-cyan mb-2">$4,500/мес</div>
-                  <div className="text-sm text-gray-300">
-                    Создание видео с Veo 3 + CapCut. 
-                    Запустил собственную студию AI-видеопродакшена за 2 месяца.
-                  </div>
-                </div>
-                <div className="flex gap-2 flex-wrap">
-                  <span className="text-xs bg-cyber-cyan/10 text-cyber-cyan px-2 py-1 rounded">Veo 3</span>
-                  <span className="text-xs bg-cyber-cyan/10 text-cyber-cyan px-2 py-1 rounded">CapCut</span>
+                  
+                  <button 
+                    onClick={() => setCurrentCase(Math.min(2, currentCase + 1))}
+                    className="p-2 rounded-full bg-cyber-green/20 text-cyber-green hover:bg-cyber-green/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled={currentCase === 2}
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
