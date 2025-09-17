@@ -128,20 +128,28 @@ function SimpleApp() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="min-h-screen relative flex items-center justify-center pt-16 sm:pt-20"
+        className="min-h-screen relative flex items-center justify-center pt-16 sm:pt-20 overflow-hidden"
+        style={{ width: '100%', maxWidth: '100vw' }}
       >
         {/* Фоновое изображение */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
           <img 
             src="/ai-base-hero-bg.png"
             alt="AI Base Background"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
+            style={{ 
+              minWidth: '100%',
+              minHeight: '100%',
+              maxWidth: 'none',
+              objectFit: 'cover'
+            }}
           />
           {/* Минимальный темный overlay только для читаемости текста */}
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10 w-full max-w-full"
+             style={{ overflow: 'hidden' }}>
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
