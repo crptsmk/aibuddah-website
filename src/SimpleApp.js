@@ -5,8 +5,9 @@ import { baseInfo, projects, tools, contact, intensive, testimonials, faq } from
 
 function SimpleApp() {
   
-  // Состояние для кнопки "Наверх"
+  // Состояние для кнопки "Наверх" и sticky nav
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [stickyNav, setStickyNav] = useState(false);
 
   // Intersection Observer для автозапуска YouTube видео
   useEffect(() => {
