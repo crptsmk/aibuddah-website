@@ -123,6 +123,52 @@ function SimpleApp() {
         </div>
       </nav>
 
+      {/* Sticky Navigation Bar */}
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ 
+          y: stickyNav ? 0 : -100, 
+          opacity: stickyNav ? 1 : 0 
+        }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        className={`
+          fixed top-0 left-0 right-0 z-50 
+          bg-cyber-dark/95 backdrop-blur-md 
+          border-b border-cyber-green/30
+          ${stickyNav ? 'pointer-events-auto' : 'pointer-events-none'}
+        `}
+        style={{ display: stickyNav ? 'block' : 'none' }}
+      >
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <button 
+              onClick={scrollToTop}
+              className="text-cyber-green font-brutal text-lg hover:text-cyber-cyan transition-colors"
+            >
+              AI BUDDAH
+            </button>
+            
+            {/* Navigation Links */}
+            <div className="hidden md:flex items-center gap-4">
+              <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-cyber-green transition-colors text-sm">О себе</button>
+              <button onClick={() => scrollToSection('intensive')} className="text-gray-300 hover:text-cyber-orange transition-colors text-sm">Интенсив</button>
+              <button onClick={() => scrollToSection('buddah-base')} className="text-gray-300 hover:text-cyber-purple transition-colors text-sm">Base</button>
+              <button onClick={() => scrollToSection('lead-magnet')} className="text-gray-300 hover:text-cyber-cyan transition-colors text-sm">Free</button>
+              <button onClick={() => scrollToSection('cases')} className="text-gray-300 hover:text-cyber-cyan transition-colors text-sm">Кейсы</button>
+            </div>
+            
+            {/* CTA Button */}
+            <a 
+              href="https://payform.ru/4193Ie4/" 
+              className="btn-cyber btn-primary text-xs px-4 py-2 min-h-[44px] flex items-center"
+            >
+              💎 AI BASE
+            </a>
+          </div>
+        </div>
+      </motion.div>
+
       {/* Hero Section - Улучшенная мобильная адаптация */}
       <motion.section 
         initial={{ opacity: 0, y: 50 }}
