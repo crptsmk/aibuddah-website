@@ -543,7 +543,14 @@ function SimpleApp() {
       </section>
 
       {/* Buddah Base Section - С автозапуском YouTube видео */}
-      <section id="buddah-base" className="py-20 bg-gradient-cyber relative overflow-hidden">
+      <motion.section 
+        id="buddah-base" 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="py-20 bg-gradient-cyber relative overflow-hidden"
+      >
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-96 h-96 bg-cyber-purple rounded-full opacity-10 blur-3xl animate-pulse"></div>
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyber-cyan rounded-full opacity-10 blur-3xl animate-float"></div>
