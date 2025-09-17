@@ -1441,37 +1441,6 @@ function SimpleApp() {
         </div>
       </div>
 
-      {/* Mobile Sticky CTA - только для небольших экранов */}
-      <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ 
-          y: stickyNav ? 0 : 100, 
-          opacity: stickyNav ? 1 : 0 
-        }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        className={`
-          fixed bottom-16 left-0 right-0 z-40 p-4
-          lg:hidden
-          ${stickyNav ? 'pointer-events-auto' : 'pointer-events-none'}
-        `}
-        style={{ display: stickyNav ? 'block' : 'none' }}
-      >
-        <div className="max-w-sm mx-auto">
-          <a 
-            href="https://payform.ru/4193Ie4/" 
-            className="
-              btn-cyber btn-primary w-full text-center 
-              py-4 px-6 text-lg font-bold 
-              min-h-[52px] flex items-center justify-center
-              shadow-lg shadow-cyber-green/30
-              animate-pulse-glow
-            "
-          >
-            🔥 ВСТУПИТЬ В AI BASE
-          </a>
-        </div>
-      </motion.div>
-
       {/* Кнопка "Наверх" */}
       <motion.button
         onClick={scrollToTop}
