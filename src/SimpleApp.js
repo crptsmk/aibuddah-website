@@ -97,13 +97,13 @@ function SimpleApp() {
           
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-4 xl:gap-6">
-            <a href="#about" className="text-gray-300 hover:text-cyber-green transition-colors text-sm xl:text-base">О себе</a>
-            <a href="#intensive" className="text-gray-300 hover:text-cyber-orange transition-colors text-sm xl:text-base">Интенсив</a>
-            <a href="#buddah-base" className="text-gray-300 hover:text-cyber-purple transition-colors text-sm xl:text-base">Base</a>
-            <a href="#lead-magnet" className="text-gray-300 hover:text-cyber-cyan transition-colors text-sm xl:text-base">Бесплатно</a>
-            <a href="#cases" className="text-gray-300 hover:text-cyber-cyan transition-colors text-sm xl:text-base">Кейсы</a>
-            <a href="#faq" className="text-gray-300 hover:text-cyber-green transition-colors text-sm xl:text-base">FAQ</a>
-            <a href="https://payform.ru/ms93cWm/" className="btn-cyber btn-primary text-xs sm:text-sm px-3 sm:px-4 py-2">
+            <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-cyber-green transition-colors text-sm xl:text-base">О себе</button>
+            <button onClick={() => scrollToSection('intensive')} className="text-gray-300 hover:text-cyber-orange transition-colors text-sm xl:text-base">Интенсив</button>
+            <button onClick={() => scrollToSection('buddah-base')} className="text-gray-300 hover:text-cyber-purple transition-colors text-sm xl:text-base">Base</button>
+            <button onClick={() => scrollToSection('lead-magnet')} className="text-gray-300 hover:text-cyber-cyan transition-colors text-sm xl:text-base">Бесплатно</button>
+            <button onClick={() => scrollToSection('cases')} className="text-gray-300 hover:text-cyber-cyan transition-colors text-sm xl:text-base">Кейсы</button>
+            <button onClick={() => scrollToSection('faq')} className="text-gray-300 hover:text-cyber-green transition-colors text-sm xl:text-base">FAQ</button>
+            <a href="https://payform.ru/ms93cWm/" className="btn-cyber btn-primary text-xs sm:text-sm px-3 sm:px-4 py-2 min-h-[44px] flex items-center">
               🔥 Интенсив
             </a>
           </div>
