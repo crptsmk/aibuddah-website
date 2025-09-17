@@ -392,7 +392,7 @@ function SimpleApp() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Intensive Section - Полностью переработанная */}
       <section id="intensive" className="py-20 bg-gradient-to-br from-cyber-dark via-cyber-gray to-cyber-dark relative">
