@@ -230,7 +230,7 @@ function SimpleApp() {
       </motion.section>
 
       {/* AI Creative Gallery Section */}
-      <section className="py-20 bg-cyber-dark relative overflow-hidden">
+      <motion.section className="py-20 bg-cyber-dark relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 right-20 w-96 h-96 bg-cyber-purple rounded-full opacity-5 blur-3xl animate-pulse-glow"></div>
           <div className="absolute bottom-20 left-20 w-80 h-80 bg-cyber-cyan rounded-full opacity-5 blur-3xl animate-float"></div>
