@@ -1484,29 +1484,6 @@ function SimpleApp() {
         </svg>
       </motion.button>
 
-      {/* Tooltip для кнопки "Наверх" на мобильных */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ 
-          opacity: showScrollTop ? 1 : 0
-        }}
-        transition={{ duration: 0.3, delay: 0.1 }}
-        className={`
-          fixed bottom-20 right-16 sm:right-20 z-30
-          bg-cyber-dark border border-cyber-green
-          text-cyber-green text-xs sm:text-sm
-          px-2 py-1 rounded-lg
-          whitespace-nowrap
-          shadow-lg
-          lg:hidden
-          ${showScrollTop ? 'pointer-events-auto' : 'pointer-events-none'}
-        `}
-        style={{ display: showScrollTop ? 'block' : 'none' }}
-      >
-        Наверх
-        <div className="absolute top-1/2 -right-1 transform -translate-y-1/2 w-2 h-2 bg-cyber-dark border-r border-b border-cyber-green rotate-45"></div>
-      </motion.div>
-
     </div>
   );
 }
