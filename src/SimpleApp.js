@@ -540,7 +540,7 @@ function SimpleApp() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Buddah Base Section - С автозапуском YouTube видео */}
       <motion.section 
