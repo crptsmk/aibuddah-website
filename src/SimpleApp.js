@@ -8,6 +8,9 @@ function SimpleApp() {
   // Состояние для кнопки "Наверх" и каруселей
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [currentCase, setCurrentCase] = useState(0);
+  const [currentCreative, setCurrentCreative] = useState(0);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [currentFaq, setCurrentFaq] = useState(0);
 
   // Intersection Observer для автозапуска YouTube видео
   useEffect(() => {
