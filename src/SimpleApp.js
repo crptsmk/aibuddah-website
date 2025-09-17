@@ -43,12 +43,16 @@ function SimpleApp() {
     }
   }, []);
 
-  // Обработка скролла для кнопки "Наверх"
+  // Обработка скролла для кнопки "Наверх" и sticky nav
   useEffect(() => {
     const handleScroll = () => {
-      // Показываем кнопку после скролла на 2-3 экрана (примерно 1500px)
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Показываем кнопку "Наверх" после скролла на 2-3 экрана
       setShowScrollTop(scrollTop > 1500);
+      
+      // Показываем sticky nav после скролла на 1 экран
+      setStickyNav(scrollTop > 800);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -64,6 +68,17 @@ function SimpleApp() {
       top: 0,
       behavior: 'smooth'
     });
+  };
+
+  // Функция плавного скролла к секции
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   };
 
   return (
