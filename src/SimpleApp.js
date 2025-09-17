@@ -1239,7 +1239,7 @@ function SimpleApp() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Enhanced FAQ Section */}
       <section id="faq" className="py-20 bg-cyber-dark relative overflow-hidden">
