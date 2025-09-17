@@ -109,14 +109,14 @@ function SimpleApp() {
           </div>
           
           {/* Mobile Navigation */}
-          <div className="lg:hidden flex items-center gap-2">
-            <a href="#lead-magnet" className="btn-cyber btn-accent text-xs px-3 py-2">
+          <div className="lg:hidden flex items-center gap-1">
+            <a href="#lead-magnet" className="btn-cyber btn-accent text-xs px-2 py-2 text-center flex items-center justify-center min-h-[40px]">
               🎁 FREE
             </a>
-            <a href="#buddah-base" className="btn-cyber btn-secondary text-xs px-3 py-3 min-h-[44px] flex items-center">
+            <a href="#buddah-base" className="btn-cyber btn-secondary text-xs px-2 py-2 text-center flex items-center justify-center min-h-[40px]">
               Base
             </a>
-            <a href="https://payform.ru/ms93cWm/" className="btn-cyber btn-primary text-xs px-3 py-3 min-h-[44px] flex items-center">
+            <a href="https://payform.ru/ms93cWm/" className="btn-cyber btn-primary text-xs px-2 py-2 text-center flex items-center justify-center min-h-[40px]">
               🔥 Курс
             </a>
           </div>
