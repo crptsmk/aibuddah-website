@@ -227,7 +227,7 @@ function SimpleApp() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* AI Creative Gallery Section */}
       <section className="py-20 bg-cyber-dark relative overflow-hidden">
