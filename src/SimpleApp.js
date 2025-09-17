@@ -825,7 +825,14 @@ function SimpleApp() {
       </motion.section>
 
       {/* Lead Magnet Section - НОВЫЙ БЛОК */}
-      <section id="lead-magnet" className="py-20 bg-cyber-gray relative overflow-hidden">
+      <motion.section 
+        id="lead-magnet" 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="py-20 bg-cyber-gray relative overflow-hidden"
+      >
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
