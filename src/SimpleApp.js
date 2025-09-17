@@ -155,9 +155,18 @@ function SimpleApp() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-brutal font-black text-cyber-green neon-text mb-6 sm:mb-8 leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-brutal font-black text-cyber-green neon-text mb-4 sm:mb-6 md:mb-8 leading-tight px-2"
           >
-            Обучение нейросетям и ChatGPT с нуля за 2 недели
+            <div className="block sm:hidden">
+              {/* Мобильная версия - разбитие на строки */}
+              <div>Обучение нейросетям</div>
+              <div>и ChatGPT с нуля</div>
+              <div>за 2 недели</div>
+            </div>
+            <div className="hidden sm:block">
+              {/* Десктопная версия */}
+              Обучение нейросетям и ChatGPT с нуля за 2 недели
+            </div>
           </motion.h1>
           
           <motion.div 
