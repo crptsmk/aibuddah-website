@@ -951,7 +951,7 @@ function SimpleApp() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
       {/* Success Cases Section - С реальными фото */}
       <motion.section id="cases" className="py-20 bg-cyber-dark relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
