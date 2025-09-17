@@ -1399,96 +1399,247 @@ function SimpleApp() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12">
-              <div className="bg-cyber-dark/50 border border-cyber-green/30 rounded-xl p-6 sm:p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-cyber-green/20 rounded-full flex items-center justify-center text-2xl">
-                    👨‍💼
-                  </div>
-                  <div>
-                    <div className="font-bold text-cyber-green text-lg">Алексей К.</div>
-                    <div className="text-sm text-gray-400">Предприниматель</div>
-                    <div className="flex gap-1 mt-1">
-                      <span className="text-cyber-green">⭐⭐⭐⭐⭐</span>
+            {/* Отзывы - Адаптивная карусель */}
+            <div className="relative mb-12">
+              {/* Десктопная версия - сетка */}
+              <div className="hidden md:grid grid-cols-2 gap-6 sm:gap-8">
+                <div className="bg-cyber-dark/50 border border-cyber-green/30 rounded-xl p-6 sm:p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 bg-cyber-green/20 rounded-full flex items-center justify-center text-2xl">
+                      👨‍💼
+                    </div>
+                    <div>
+                      <div className="font-bold text-cyber-green text-lg">Алексей К.</div>
+                      <div className="text-sm text-gray-400">Предприниматель</div>
+                      <div className="flex gap-1 mt-1">
+                        <span className="text-cyber-green">⭐⭐⭐⭐⭐</span>
+                      </div>
                     </div>
                   </div>
+                  <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                    "Благодаря Buddah Base я запустил свой AI-проект и зарабатываю $2000+ в месяц! 
+                    Особенно помогли готовые промпты и шаблоны автоматизации. 
+                    Александр объясняет сложные вещи простым языком."
+                  </blockquote>
+                  <div className="text-cyber-green font-bold">
+                    Результат за 3 месяца: +$6,000 дохода
+                  </div>
                 </div>
-                <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
-                  "Благодаря Buddah Base я запустил свой AI-проект и зарабатываю $2000+ в месяц! 
-                  Особенно помогли готовые промпты и шаблоны автоматизации. 
-                  Александр объясняет сложные вещи простым языком."
-                </blockquote>
-                <div className="text-cyber-green font-bold">
-                  Результат за 3 месяца: +$6,000 дохода
+
+                <div className="bg-cyber-dark/50 border border-cyber-purple/30 rounded-xl p-6 sm:p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 bg-cyber-purple/20 rounded-full flex items-center justify-center text-2xl">
+                      👩‍💻
+                    </div>
+                    <div>
+                      <div className="font-bold text-cyber-purple text-lg">Мария Д.</div>
+                      <div className="text-sm text-gray-400">Маркетолог</div>
+                      <div className="flex gap-1 mt-1">
+                        <span className="text-cyber-purple">⭐⭐⭐⭐⭐</span>
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                    "Шаблоны автоматизации сэкономили мне 20+ часов в неделю. Теперь все на автомате! 
+                    Комьюнити очень активное, всегда помогут с вопросами. 
+                    База постоянно обновляется новыми материалами."
+                  </blockquote>
+                  <div className="text-cyber-purple font-bold">
+                    Экономия времени: 80+ часов в месяц
+                  </div>
+                </div>
+
+                <div className="bg-cyber-dark/50 border border-cyber-cyan/30 rounded-xl p-6 sm:p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 bg-cyber-cyan/20 rounded-full flex items-center justify-center text-2xl">
+                      🎨
+                    </div>
+                    <div>
+                      <div className="font-bold text-cyber-cyan text-lg">Дмитрий С.</div>
+                      <div className="text-sm text-gray-400">SMM-специалист</div>
+                      <div className="flex gap-1 mt-1">
+                        <span className="text-cyber-cyan">⭐⭐⭐⭐⭐</span>
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                    "VEO 3 + промпты из базы = идеальный контент для соцсетей. Клиенты в восторге! 
+                    Качество материалов на высшем уровне. 
+                    Окупил базу уже с первого заказа."
+                  </blockquote>
+                  <div className="text-cyber-cyan font-bold">
+                    Окупаемость: за 1 неделю
+                  </div>
+                </div>
+
+                <div className="bg-cyber-dark/50 border border-cyber-orange/30 rounded-xl p-6 sm:p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 bg-cyber-orange/20 rounded-full flex items-center justify-center text-2xl">
+                      🚀
+                    </div>
+                    <div>
+                      <div className="font-bold text-cyber-orange text-lg">Анна В.</div>
+                      <div className="text-sm text-gray-400">AI-продюсер</div>
+                      <div className="flex gap-1 mt-1">
+                        <span className="text-cyber-orange">⭐⭐⭐⭐⭐</span>
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                    "За интенсив освоил MidJourney и CapCut. Уже получил первые заказы на 50к! 
+                    Телеграм-группа - это золото. Участники делятся реальными кейсами и лайфхаками. 
+                    Александр всегда на связи."
+                  </blockquote>
+                  <div className="text-cyber-orange font-bold">
+                    Первый заказ: 50,000₽ за неделю
+                  </div>
                 </div>
               </div>
 
-              <div className="bg-cyber-dark/50 border border-cyber-purple/30 rounded-xl p-6 sm:p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-cyber-purple/20 rounded-full flex items-center justify-center text-2xl">
-                    👩‍💻
-                  </div>
-                  <div>
-                    <div className="font-bold text-cyber-purple text-lg">Мария Д.</div>
-                    <div className="text-sm text-gray-400">Маркетолог</div>
-                    <div className="flex gap-1 mt-1">
-                      <span className="text-cyber-purple">⭐⭐⭐⭐⭐</span>
+              {/* Мобильная версия - карусель */}
+              <div className="md:hidden">
+                <div className="overflow-hidden rounded-xl">
+                  <motion.div 
+                    className="flex transition-transform duration-300 ease-out"
+                    style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
+                  >
+                    {/* Отзыв 1 - Алексей */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-dark/50 border border-cyber-green/30 rounded-xl p-6">
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="w-16 h-16 bg-cyber-green/20 rounded-full flex items-center justify-center text-2xl">
+                            👨‍💼
+                          </div>
+                          <div>
+                            <div className="font-bold text-cyber-green text-lg">Алексей К.</div>
+                            <div className="text-sm text-gray-400">Предприниматель</div>
+                            <div className="flex gap-1 mt-1">
+                              <span className="text-cyber-green">⭐⭐⭐⭐⭐</span>
+                            </div>
+                          </div>
+                        </div>
+                        <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                          "Благодаря Buddah Base я запустил свой AI-проект и зарабатываю $2000+ в месяц! 
+                          Особенно помогли готовые промпты и шаблоны автоматизации."
+                        </blockquote>
+                        <div className="text-cyber-green font-bold">
+                          Результат: +$6,000 за 3 месяца
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
-                  "Шаблоны автоматизации сэкономили мне 20+ часов в неделю. Теперь все на автомате! 
-                  Комьюнити очень активное, всегда помогут с вопросами. 
-                  База постоянно обновляется новыми материалами."
-                </blockquote>
-                <div className="text-cyber-purple font-bold">
-                  Экономия времени: 80+ часов в месяц
-                </div>
-              </div>
 
-              <div className="bg-cyber-dark/50 border border-cyber-cyan/30 rounded-xl p-6 sm:p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-cyber-cyan/20 rounded-full flex items-center justify-center text-2xl">
-                    🎨
-                  </div>
-                  <div>
-                    <div className="font-bold text-cyber-cyan text-lg">Дмитрий С.</div>
-                    <div className="text-sm text-gray-400">SMM-специалист</div>
-                    <div className="flex gap-1 mt-1">
-                      <span className="text-cyber-cyan">⭐⭐⭐⭐⭐</span>
+                    {/* Отзыв 2 - Мария */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-dark/50 border border-cyber-purple/30 rounded-xl p-6">
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="w-16 h-16 bg-cyber-purple/20 rounded-full flex items-center justify-center text-2xl">
+                            👩‍💻
+                          </div>
+                          <div>
+                            <div className="font-bold text-cyber-purple text-lg">Мария Д.</div>
+                            <div className="text-sm text-gray-400">Маркетолог</div>
+                            <div className="flex gap-1 mt-1">
+                              <span className="text-cyber-purple">⭐⭐⭐⭐⭐</span>
+                            </div>
+                          </div>
+                        </div>
+                        <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                          "Шаблоны автоматизации сэкономили мне 20+ часов в неделю. Теперь все на автомате! 
+                          Комьюнити очень активное, всегда помогут."
+                        </blockquote>
+                        <div className="text-cyber-purple font-bold">
+                          Экономия: 80+ часов в месяц
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
-                  "VEO 3 + промпты из базы = идеальный контент для соцсетей. Клиенты в восторге! 
-                  Качество материалов на высшем уровне. 
-                  Окупил базу уже с первого заказа."
-                </blockquote>
-                <div className="text-cyber-cyan font-bold">
-                  Окупаемость: за 1 неделю
-                </div>
-              </div>
 
-              <div className="bg-cyber-dark/50 border border-cyber-orange/30 rounded-xl p-6 sm:p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-cyber-orange/20 rounded-full flex items-center justify-center text-2xl">
-                    🚀
-                  </div>
-                  <div>
-                    <div className="font-bold text-cyber-orange text-lg">Анна В.</div>
-                    <div className="text-sm text-gray-400">AI-продюсер</div>
-                    <div className="flex gap-1 mt-1">
-                      <span className="text-cyber-orange">⭐⭐⭐⭐⭐</span>
+                    {/* Отзыв 3 - Дмитрий */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-dark/50 border border-cyber-cyan/30 rounded-xl p-6">
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="w-16 h-16 bg-cyber-cyan/20 rounded-full flex items-center justify-center text-2xl">
+                            🎨
+                          </div>
+                          <div>
+                            <div className="font-bold text-cyber-cyan text-lg">Дмитрий С.</div>
+                            <div className="text-sm text-gray-400">SMM-специалист</div>
+                            <div className="flex gap-1 mt-1">
+                              <span className="text-cyber-cyan">⭐⭐⭐⭐⭐</span>
+                            </div>
+                          </div>
+                        </div>
+                        <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                          "VEO 3 + промпты из базы = идеальный контент для соцсетей. Клиенты в восторге! 
+                          Окупил базу уже с первого заказа."
+                        </blockquote>
+                        <div className="text-cyber-cyan font-bold">
+                          Окупаемость: за 1 неделю
+                        </div>
+                      </div>
                     </div>
-                  </div>
+
+                    {/* Отзыв 4 - Анна */}
+                    <div className="w-full flex-shrink-0 px-2">
+                      <div className="bg-cyber-dark/50 border border-cyber-orange/30 rounded-xl p-6">
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="w-16 h-16 bg-cyber-orange/20 rounded-full flex items-center justify-center text-2xl">
+                            🚀
+                          </div>
+                          <div>
+                            <div className="font-bold text-cyber-orange text-lg">Анна В.</div>
+                            <div className="text-sm text-gray-400">AI-продюсер</div>
+                            <div className="flex gap-1 mt-1">
+                              <span className="text-cyber-orange">⭐⭐⭐⭐⭐</span>
+                            </div>
+                          </div>
+                        </div>
+                        <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                          "За интенсив освоил MidJourney и CapCut. Уже получил первые заказы на 50к! 
+                          Телеграм-группа - это золото. Участники делятся реальными кейсами."
+                        </blockquote>
+                        <div className="text-cyber-orange font-bold">
+                          Первый заказ: 50,000₽ за неделю
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
                 </div>
-                <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
-                  "За интенсив освоил MidJourney и CapCut. Уже получил первые заказы на 50к! 
-                  Телеграм-группа - это золото. Участники делятся реальными кейсами и лайфхаками. 
-                  Александр всегда на связи."
-                </blockquote>
-                <div className="text-cyber-orange font-bold">
-                  Первый заказ: 50,000₽ за неделю
+
+                {/* Навигация карусели отзывов */}
+                <div className="flex items-center justify-center mt-6 gap-4">
+                  <button 
+                    onClick={() => setCurrentTestimonial(Math.max(0, currentTestimonial - 1))}
+                    className="p-2 rounded-full bg-cyber-cyan/20 text-cyber-cyan hover:bg-cyber-cyan/30 transition-all disabled:opacity-50"
+                    disabled={currentTestimonial === 0}
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  
+                  <div className="flex gap-2">
+                    {[0, 1, 2, 3].map((index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentTestimonial(index)}
+                        className={`w-3 h-3 rounded-full transition-all ${
+                          currentTestimonial === index 
+                            ? 'bg-cyber-cyan' 
+                            : 'bg-gray-600 hover:bg-gray-500'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  
+                  <button 
+                    onClick={() => setCurrentTestimonial(Math.min(3, currentTestimonial + 1))}
+                    className="p-2 rounded-full bg-cyber-cyan/20 text-cyber-cyan hover:bg-cyber-cyan/30 transition-all disabled:opacity-50"
+                    disabled={currentTestimonial === 3}
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
