@@ -1425,6 +1425,73 @@ function SimpleApp() {
           </a>
         </div>
       </div>
+
+      {/* Кнопка "Наверх" */}
+      <motion.button
+        onClick={scrollToTop}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ 
+          opacity: showScrollTop ? 1 : 0, 
+          scale: showScrollTop ? 1 : 0.8,
+          y: showScrollTop ? 0 : 20
+        }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        className={`
+          fixed bottom-20 right-4 sm:right-6 z-40 
+          bg-gradient-to-r from-cyber-green to-cyber-cyan 
+          hover:from-cyber-cyan hover:to-cyber-green
+          text-cyber-dark font-bold
+          w-12 h-12 sm:w-14 sm:h-14
+          rounded-full
+          flex items-center justify-center
+          shadow-lg shadow-cyber-green/50 hover:shadow-cyber-cyan/50
+          transition-all duration-300
+          hover:scale-110 active:scale-95
+          neon-glow
+          ${showScrollTop ? 'pointer-events-auto' : 'pointer-events-none'}
+        `}
+        style={{ display: showScrollTop ? 'flex' : 'none' }}
+        title="Вернуться наверх"
+        aria-label="Прокрутить страницу вверх"
+      >
+        <svg 
+          className="w-5 h-5 sm:w-6 sm:h-6" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth={3} 
+            d="M5 15l7-7 7 7" 
+          />
+        </svg>
+      </motion.button>
+
+      {/* Tooltip для кнопки "Наверх" на мобильных */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ 
+          opacity: showScrollTop ? 1 : 0
+        }}
+        transition={{ duration: 0.3, delay: 0.1 }}
+        className={`
+          fixed bottom-20 right-16 sm:right-20 z-30
+          bg-cyber-dark border border-cyber-green
+          text-cyber-green text-xs sm:text-sm
+          px-2 py-1 rounded-lg
+          whitespace-nowrap
+          shadow-lg
+          lg:hidden
+          ${showScrollTop ? 'pointer-events-auto' : 'pointer-events-none'}
+        `}
+        style={{ display: showScrollTop ? 'block' : 'none' }}
+      >
+        Наверх
+        <div className="absolute top-1/2 -right-1 transform -translate-y-1/2 w-2 h-2 bg-cyber-dark border-r border-b border-cyber-green rotate-45"></div>
+      </motion.div>
+
     </div>
   );
 }
