@@ -1383,7 +1383,7 @@ function SimpleApp() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Fixed CTA Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-cyber-dark border-t border-cyber-green z-50 p-3">
