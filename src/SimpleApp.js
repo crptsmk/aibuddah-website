@@ -2026,7 +2026,7 @@ function SimpleApp() {
             href="https://t.me/buddah_ai" 
             className="btn-cyber btn-secondary text-sm px-4 py-3 flex-1 text-center min-h-[48px] flex items-center justify-center"
           >
-            📱 Telegram
+            <span className="flex items-center justify-center w-full">📱 Telegram</span>
           </a>
         </div>
       </div>
