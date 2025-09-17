@@ -128,7 +128,7 @@ function SimpleApp() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="min-h-screen relative flex items-center justify-center pt-16 sm:pt-20 overflow-hidden"
+        className="min-h-screen relative flex items-center justify-center pt-20 sm:pt-16 pb-8 sm:pb-0 overflow-hidden"
         style={{ width: '100%', maxWidth: '100vw' }}
       >
         {/* Фоновое изображение */}
