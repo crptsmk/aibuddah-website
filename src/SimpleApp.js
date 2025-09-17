@@ -386,11 +386,14 @@ function SimpleApp() {
               </div>
 
               {/* Мобильная версия - карусель */}
-              <div className="md:hidden">
-                <div className="overflow-hidden rounded-xl">
+              <div className="md:hidden w-full overflow-hidden">
+                <div className="relative w-full overflow-hidden rounded-xl">
                   <motion.div 
-                    className="flex transition-transform duration-300 ease-out"
-                    style={{ transform: `translateX(-${currentCreative * 100}%)` }}
+                    className="flex transition-transform duration-300 ease-out w-full"
+                    style={{ 
+                      transform: `translateX(-${currentCreative * 100}%)`,
+                      width: `${5 * 100}%`
+                    }}
                   >
                     {[
                       {
