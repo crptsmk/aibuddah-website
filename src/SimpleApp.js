@@ -135,11 +135,16 @@ function SimpleApp() {
           <img 
             src="/ai-base-hero-bg.png"
             alt="AI Base Background"
-            className="w-full h-full object-cover blur-sm"
-            style={{ filter: 'blur(3px)' }}
+            className="w-full h-full object-cover"
+            style={{ 
+              filter: 'blur(4px) brightness(0.3) contrast(0.8)',
+              opacity: 0.6
+            }}
           />
-          {/* Темный overlay для лучшей читаемости */}
-          <div className="absolute inset-0 bg-cyber-dark/70"></div>
+          {/* Очень темный overlay для читаемости */}
+          <div className="absolute inset-0 bg-cyber-dark/85"></div>
+          {/* Дополнительный градиент overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-cyber-dark/70 via-cyber-dark/50 to-cyber-dark/80"></div>
         </div>
 
         {/* Анимированные декоративные элементы */}
