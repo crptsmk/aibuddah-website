@@ -693,19 +693,15 @@ function App() {
               <h4 className="text-xl font-bold text-cyber-green mb-4">🎁 Бонусы участникам:</h4>
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-center gap-2">
-                  <span className="text-cyber-purple">🎯</span> 
-                  Google AI Pro на 12 месяцев (стоимость $240)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-cyber-purple">📱</span> 
+                  <span className="text-cyber-purple">📱</span>
                   Доступ в закрытую Telegram-группу навсегда
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-cyber-purple">💼</span> 
+                  <span className="text-cyber-purple">💼</span>
                   Шаблоны договоров с клиентами
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-cyber-purple">📈</span> 
+                  <span className="text-cyber-purple">📈</span>
                   Гайд по поиску первых клиентов
                 </li>
               </ul>
@@ -724,7 +720,7 @@ function App() {
             🚀 Бронируй место прямо сейчас!
           </h3>
           <p className="text-gray-300 mb-6">
-            Только 15 мест • Старт уже 29 сентября • Бонус: Google AI Pro на 12 месяцев (стоимость $240)
+            Только 15 мест • Старт уже 29 сентября
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
